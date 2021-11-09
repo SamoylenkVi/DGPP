@@ -1,0 +1,28 @@
+.navigation {
+	display: flex;
+	align-items: center;
+}
+
+.navigation__list {
+	@include list-default-remove;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 41px;
+
+	& li {
+		margin-left: 32px;
+	}
+}
+
+.navigation__link {
+	@include link-default-remove;
+	padding-bottom: 4px;
+
+	&:not([href]) {
+		font-weight: $bold-font-weight;
+		border-bottom: 3px solid $base-pink;
+	}
+}

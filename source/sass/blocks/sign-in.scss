@@ -1,0 +1,272 @@
+.sign-up {
+	display: none;
+}
+
+.sign-in {
+	display: none;
+}
+
+.pop-up__content {
+	width: 700px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate3d(-50%, 50%, 0);
+	border: 1px solid $black;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 40px 30.5px 0 40px;
+}
+
+.sign-in__content {
+	min-height: 544px;
+}
+
+.sign-up__content {
+	min-height: 728px;
+	justify-content: flex-start;
+}
+
+.pop-up__logo {
+	margin-left: auto;
+	transform: rotate(7.93deg);
+	margin-top: -63px;
+	margin-right: 22px;
+	width: 142px;
+	height: 117px;
+}
+
+.pop-up__close {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	outline: none;
+	border: 1px solid $black;
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate3d(-23%, 23%, 0);
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		width: 17px;
+		height: 2px;
+		background-color: $black;
+		top: 45%;
+		left: 21%;
+		z-index: 4;
+	}
+
+	&::before {
+		transform: rotate(-45deg);
+	}
+
+	&::after {
+		transform: rotate(45deg);
+	}
+}
+
+.pop-up__title {
+	margin: -58px 0 7px;
+}
+.pop-up__title > span {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 8px;
+		left: 3px;
+		background-image: url(../img/error.svg);
+		background-repeat: no-repeat;
+		width: 40px;
+		height: 42px;
+		z-index: 1;
+	}
+}
+
+.sign-in__title > span {
+	&::before {
+		top: 8px;
+		left: 3px;
+		background-image: url(../img/error.svg);
+		width: 40px;
+		height: 42px;
+	}
+}
+
+.sign-up__title {
+	margin-bottom: 21px;
+}
+
+.sign-up__title > span {
+	&::before {
+		background-image: url(../img/error-a.svg);
+		top: -16px;
+		left: -2px;
+		width: 40px;
+		height: 64px;
+	}
+}
+
+.sign-up-description {
+	margin: 0;
+	padding: 0 83px 42px 0;
+}
+
+.sign-in__wrapper {
+	display: flex;
+	flex-direction: row;
+	margin-top: 40px;
+}
+
+.sign-in__form {
+	max-width: 301px;
+	padding-bottom: 63px;
+}
+
+.pop-up__form input {
+	min-height: 46px;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid $black;
+	margin-bottom: 40px;
+	transition: 0.5s;
+}
+.sign-up__form {
+	max-width: 480px;
+
+	& input {
+		margin-bottom: 42px;
+	}
+}
+
+.pop-up__form > label {
+	font-size: $base-mobile-font-size;
+	line-height: 0;
+	display: block;
+	color: #aaa;
+	transform: translate3d(0, -3.4rem, 0);
+	transition: 0.5s;
+}
+
+.pop-up__form > input:focus,
+.pop-up__form > input:valid {
+	min-height: 62px;
+	margin-bottom: 26px;
+	outline: none;
+
+	&:focus + label,
+	&:valid + label {
+		font-size: $small-text-mobile-size;
+		line-height: $small-label-height;
+		transform: translate3d(4px, -4.3rem, 0);
+	}
+}
+
+.pop-up__buttons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.pop-up__button {
+	border-radius: 4px;
+	min-height: 48px;
+	font-size: $base-mobile-font-size;
+	line-height: $small-text-tablet-height;
+	background-color: $base-grey;
+	margin-bottom: 16px;
+
+	&--in {
+		background-color: $base-pink;
+		min-width: 96px;
+		margin-right: 16px;
+	}
+
+	&--recovery {
+		@include link-default-remove;
+		min-width: 189px;
+	}
+
+	&--create {
+		flex-grow: 1;
+		width: 100%;
+	}
+
+	&--reset {
+		min-width: 128px;
+	}
+}
+
+.sign-up__buttons {
+	padding-top: 36px;
+}
+
+.sign-up__button--create {
+	background-color: $base-pink;
+	min-width: 185px;
+	margin-right: 12px;
+}
+
+.sign-in__present {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 247px;
+	height: 266.5px;
+	background-image: url("../img/box.png");
+	background-position: bottom;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	align-self: flex-end;
+	padding-bottom: 100px;
+
+	h3 {
+		margin: 0;
+		font-size: $base-font-size;
+		padding-bottom: 2px;
+	}
+
+	p {
+		margin: 0;
+		font-size: $small-text-tablet-size;
+		line-height: $small-text-tablet-height;
+		padding-bottom: 38px;
+		padding-right: 34px;
+	}
+}
+
+.sign-up__agreement {
+	margin-top: -9px;
+}
+
+.sign-up__agreement label {
+	position: relative;
+	font-size: $base-mobile-font-size;
+	line-height: $small-text-tablet-height;
+	padding-left: 23px;
+
+	&::before {
+		position: absolute;
+		content: "";
+		width: 16px;
+		height: 16px;
+		border: 1px solid $grey;
+		border-radius: 2px;
+		top: 4%;
+		left: 0;
+	}
+}
+
+.sign-up__agreement > input:checked + label {
+	&::before {
+		background-image: url(../img/check.svg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+}

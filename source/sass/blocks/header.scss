@@ -1,0 +1,29 @@
+.header {
+	width: 100%;
+}
+
+.header__wrapper {
+	display: flex;
+	flex-direction: row;
+	min-height: 81px;
+	position: relative;
+	border: 1px solid $black;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 32px;
+	padding-left: 130px;
+	font-size: $base-mobile-font-size;
+	line-height: $small-text-tablet-height;
+}
+
+.header__logo {
+	position: absolute;
+	left: 0;
+}
+
+.header__button {
+	min-width: 180px;
+	min-height: 48px;
+	background-color: $base-pink;
+	margin-right: 16px;
+}

@@ -1,0 +1,17 @@
+.page {
+
+  background-color: $white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+	@include tablet {
+		font-size: $base-tablet-font-size;
+		line-height: $base-tablet-line-height;
+	}
+}
+
+h2 {
+	@include font-options($family-neutral, $title-mobile-font-size, $title-mobile-line-height, $bold-font-weight, $black);
+	text-transform: uppercase;
+}

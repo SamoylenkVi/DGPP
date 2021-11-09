@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+	@include font-options($family-inter, $base-font-size, $base-line-height, $medium-font-weight, $black);
+  // overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
