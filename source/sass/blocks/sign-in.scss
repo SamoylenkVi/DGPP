@@ -116,6 +116,8 @@
 .sign-up-description {
 	margin: 0;
 	padding: 0 83px 42px 0;
+	font-size: $head3-font-size;
+	line-height: $text-line-height;
 }
 
 .sign-in__wrapper {
@@ -136,6 +138,8 @@
 	border-bottom: 1px solid $black;
 	margin-bottom: 40px;
 	transition: 0.5s;
+	line-height: $base-line-height;
+	padding-top: 15px;
 }
 .sign-up__form {
 	max-width: 480px;
@@ -146,11 +150,11 @@
 }
 
 .pop-up__form > label {
-	font-size: $base-mobile-font-size;
+	font-size: $base-font-size;
 	line-height: 0;
 	display: block;
 	color: #aaa;
-	transform: translate3d(0, -3.4rem, 0);
+	transform: translate3d(0, -4.4rem, 0);
 	transition: 0.5s;
 }
 
@@ -164,7 +168,7 @@
 	&:valid + label {
 		font-size: $small-text-mobile-size;
 		line-height: $small-label-height;
-		transform: translate3d(4px, -4.3rem, 0);
+		transform: translate3d(4px, -5.3rem, 0);
 	}
 }
 
@@ -176,9 +180,6 @@
 
 .pop-up__button {
 	border-radius: 4px;
-	min-height: 48px;
-	font-size: $base-mobile-font-size;
-	line-height: $small-text-tablet-height;
 	background-color: $base-grey;
 	margin-bottom: 16px;
 
@@ -204,7 +205,7 @@
 }
 
 .sign-up__buttons {
-	padding-top: 36px;
+	padding-top: 39px;
 }
 
 .sign-up__button--create {
@@ -234,21 +235,19 @@
 
 	p {
 		margin: 0;
-		font-size: $small-text-tablet-size;
-		line-height: $small-text-tablet-height;
 		padding-bottom: 38px;
 		padding-right: 34px;
 	}
 }
 
 .sign-up__agreement {
-	margin-top: -9px;
+	margin-top: -4px;
 }
 
 .sign-up__agreement label {
 	position: relative;
-	font-size: $base-mobile-font-size;
-	line-height: $small-text-tablet-height;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
 	padding-left: 23px;
 
 	&::before {

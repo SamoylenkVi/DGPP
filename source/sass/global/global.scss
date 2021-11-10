@@ -1,7 +1,12 @@
 html {
-  box-sizing: border-box;
 	@include font-options($family-inter, $base-font-size, $base-line-height, $medium-font-weight, $black);
+  box-sizing: border-box;
   // overflow-x: hidden;
+
+	@include tablet {
+		font-size: $base-tablet-font-size;
+		line-height: $base-tablet-line-height;
+	}
 }
 
 *,

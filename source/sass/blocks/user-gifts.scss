@@ -1,0 +1,65 @@
+.user-gifts__wrapper h2 {
+	margin: 0;
+	padding-top: 13px;
+}
+
+.user-gifts__list {
+	@include list-default-remove;
+	display: flex;
+	flex-direction: column;
+	padding-top: 28px;
+}
+
+.user-gifts__item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	max-width: 1013px;
+	min-height: 124px;
+	border: 1px solid $black;
+	margin-bottom: 15px;
+	padding-right: 23px;
+}
+
+.user-gifts__description {
+	display: flex;
+	flex-direction: column;
+	padding-left: 19px;
+	padding-bottom: 9px;
+
+	& h3,
+	& p {
+		margin: 0;
+	}
+
+	& h3 {
+		padding-bottom: 12px;
+		font-size: $head3-font-size;
+		line-height: $head2-mobile-line-height;
+	}
+}
+.user-gifts__promocode {
+	margin-left: auto;
+	min-width: 356px;
+	min-height: 51px;
+	background-color: $back-grey;
+	display: flex;
+	flex-direction: row;
+}
+
+.user-gifts__promocode a {
+	@include link-default-remove;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 60%;
+}
+
+.user-gifts__copy-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 40%;
+	background-color: transparent;
+	padding: 4px 3px 4px 14px;
+}

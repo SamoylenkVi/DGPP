@@ -31,74 +31,88 @@
 				<nav class="header__navigation navigation">
 					<ul class="navigation__list">
 						<li><a class="navigation__link">Раздел</a></li>
-						<li><a class="navigation__link" href="user-profile.html">Раздел</a></li>
+						<li><a class="navigation__link" href="">Раздел</a></li>
 						<li><a class="navigation__link" href="">Раздел</a></li>
 					</ul>
 				</nav>
-				<button class="header__button button" aria-label="Войти в личный кабинет" type="button">Личный кабинет</button>
+				<button class="header__button header__button--user-profile button" aria-label="Войти в личный кабинет" type="button">Личный кабинет</button>
 			</div>
 		</header>
 		<main>
-			<h1 class="visually-hidden">Давайте говорить и писать правильно</h1>
+			<h1 class="visually-hidden">Личный кабинет</h1>
+			<section class="user-profile">
+				<div class="user-profile__wrapper wrapper">
+					<div class="user-profile__header">
+						<img class="user-profile__picture" src="" alt="Фотография пользователя" width="160" height="160" lazy>
+						<h2 class="user-profile__name">Фамилия<br>Имя</h2>
+						<button class="user-profile__change-profile button" aria-label="Редактировать профиль" type="button">Изменить профиль</button>
+					</div>
+					<ul class="user-profile__list">
+						<li>
+							<p class="user-profile__label">Рождение</p>
+							<p class="user-profile__item user-profile__item--age">12 января 1998 (12 лет)</p>
+						</li>
+						<li>
+							<p class="user-profile__label">Почта</p>
+							<p class="user-profile__item user-profile__item--mail">mail@example.ru</p>
+						</li>
+						<li>
+							<p class="user-profile__label">Телефон</p>
+							<p class="user-profile__item user-profile__item--phone">+7 987 654-32-10 <span class="user-profile__scores scores">30</span></p>
+						</li>
+						<li>
+							<p class="user-profile__label">Город</p>
+							<p class="user-profile__item user-profile__item--city">Москва <span class="user-profile__scores scores">30</span></p>
+						</li>
+						<li>
+							<p class="user-profile__label">Номер школы</p>
+							<p class="user-profile__item user-profile__item--school">Нет данных <span class="user-profile__scores scores">30</span> <span class="scores scores--extra">+10 баллов</span></p>
+						</li>
+					</ul>
+					<div class="user-profile__stepik">
+						<p class="user-profile__label">Stepik ID</p>
+						<button class="user-profile__link-account button">Связать аккаунт со </button>
+					</div>
+				</div>
+			</section>
+			<section class="feedback">
+				<div class="feedback__wrapper wrapper">
+					<h2>Обратная связь</h2>
+				</div>
+			</section>
+			<section class="user-gifts">
+				<div class="user-gifts__wrapper wrapper">
+					<h2>Ваши подарки</h2>
+					<ul class="user-gifts__list">
+						<li class="user-gifts__item">
+							<img src="" width="164" height="124" alt="Описание подарка">
+							<div class="user-gifts__description">
+								<h3>Название</h3>
+								<p>Описание</p>
+							</div>
+							<div class="user-gifts__promocode">
+								<a href="#"></a>
+								<button class="user-gifts__copy-button button">Копировать</button>
+							</div>
+						</li>
+						<li class="user-gifts__item">
+							<img src="" width="164" height="124" alt="Описание подарка">
+							<div class="user-gifts__description">
+								<h3>Название</h3>
+								<p>Описание</p>
+							</div>
+							<div class="user-gifts__promocode">
+								<a href="#"></a>
+								<button class="user-gifts__copy-button button">Копировать</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
 		</main>
 		<footer>
 		</footer>
 	</div>
-
-	<section class="pop-up sign-in">
-		<div class="pop-up__underlay"></div>
-		<div class="pop-up__content sign-in__content">
-			<img class="pop-up__logo" src="img/logo.svg" width="136" height="111" alt="Логотип Smart Device" loading="lazy">
-			<button type="button" class="pop-up__close" aria-label="Закрыть окно"></button>
-			<h2 class="pop-up__title sign-in__title">Вой<span>д</span>ти <br> в личный кабинет</h2>
-			<div class="sign-in__wrapper">
-				<form class="pop-up__form sign-in__form" action="" method="get">
-					<input type="email" id="e-mail" name="e-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
-					<label for="e-mail">Почта</label>
-					<input name="password" id="password" type="password" required>
-					<label for="password">Пароль</label>
-					<div class="pop-up__buttons sign-in__buttons">
-						<button class="sign-in__button pop-up__button pop-up__button--in button" type="submit" aria-label="Войти в личный кабинет">Войти</button>
-						<a class="sign-in__button pop-up__button pop-up__button--recovery button" href="">Не помню пароль</a>
-						<button class="sign-in__button pop-up__button pop-up__button--create button" type="submit" aria-label="Создать личный кабинет">Создать личный кабинет</button>
-					</div>
-				</form>
-				<div class="sign-in__present">
-					<h3>Подарок</h3>
-					<p>Фирменный стикерпак для Телеграма <br> и 30 баллов на счёт</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="pop-up sign-up">
-		<div class="pop-up__underlay"></div>
-		<div class="pop-up__content sign-up__content">
-			<img class="pop-up__logo" src="img/logo.svg" width="136" height="111" alt="Логотип Smart Device" loading="lazy">
-			<button type="button" class="pop-up__close" aria-label="Закрыть окно"></button>
-			<h2 class="pop-up__title sign-up__title">С<span>a</span>здать <br> личный кабинет</h2>
-			<p class="sign-up-description">Всем, кто зарегестрируется свой личный кабинет на нашем сайте, мы дарим стикерпак для Телеграма и <span class="scores">30</span>баллов на счёт, которые можно потратить на подарки от наших партнёров</p>
-			<div class="sign-up__wrapper">
-				<form class="pop-up__form sign-up__form" action="" method="get">
-					<input type="text" id="surname" name="user-surname" aria-label="Введите вашу фамилию" required>
-					<label for="surname">Фамилия</label>
-					<input type="text" id="name" name="user-name" aria-label="Введите ваше имя" required>
-					<label for="name">Имя</label>
-					<input type="email" id="e-mail" name="e-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
-					<label for="e-mail">Почта</label>
-					<div class="sign-up__agreement">
-						<input class="visually-hidden" type="checkbox" id="sign-up-agreement" name="sign-up-agreement" checked="" aria-label="Соглашение на обработку  персональных данных">
-						<label for="sign-up-agreement">Я согласен на обработку моих персональных данных</label>
-					</div>
-					<div class="pop-up__buttons sign-up__buttons">
-						<button class="sign-up__button sign-up__button--create pop-up__button button" type="submit" aria-label="Создать кабинет">Создать кабинет</button>
-						<button class="sign-up__button  pop-up__button pop-up__button--reset button" type="submit" aria-label="Отменить">Отменить</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</section>
-
 	<script src="js/script.min.js" async></script>
 </body>
 

@@ -1,0 +1,82 @@
+.user-profile__wrapper {
+	padding-top: 57px;
+}
+
+.user-profile__header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding-top: 4px;
+}
+
+.user-profile__picture {
+	border-radius: 50%;
+	object-fit: contain;
+}
+
+.user-profile__name {
+	margin: 0;
+	font-size: $title-font-size;
+	line-height: $title-line-height;
+	padding-left: 20px;
+}
+
+.user-profile__change-profile {
+	margin-left: auto;
+	min-width: 201px;
+	margin-top: 10px;
+}
+
+.user-profile__list {
+	@include list-default-remove;
+	padding-top: 54px;
+	padding-left: 3px;
+	display: flex;
+	flex-direction: column;
+
+	& li {
+		min-height: 80px;
+	}
+}
+
+.user-profile__label {
+	font-size: $small-text-mobile-size;
+	line-height: $small-label-height;
+	color: $grey;
+	margin: 0;
+	padding-bottom: 8px;
+}
+
+.user-profile__item {
+	margin: 0;
+}
+
+.user-profile__scores {
+	margin-top: -3px;
+	margin-left: 2px;
+}
+
+.user-profile__stepik {
+	padding-top: 23px;
+	padding-left: 4px;
+}
+
+.user-profile__link-account {
+	min-width: 204px;
+	background-color: $base-pink;
+	position: relative;
+	padding: 13px;
+
+	&::before {
+		position: absolute;
+		content: "";
+		background-image: url("../img/stepik.svg");
+		background-repeat: no-repeat;
+		right: -75px;
+		top: 50%;
+		transform: translate3d(0, -50%, 0);
+		height: 22px;
+		width: 87px;
+	}
+}

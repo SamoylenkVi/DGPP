@@ -25,4 +25,19 @@
 		left: 50%;
 		transform: translate3d(-50%, -50%, 10px);
 	}
+
+	&--extra {
+		min-width: 106px;
+		height: 24px;
+		border-radius: 12px;
+		font-size: $base-font-size;
+		line-height: 24px;
+		font-family: $family-inter;
+		font-weight: 500;
+		margin-left: 42px;
+
+		&::before {
+			display: none;
+		}
+	}
 }
