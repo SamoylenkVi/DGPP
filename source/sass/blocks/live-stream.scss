@@ -1,0 +1,13 @@
+.live-stream {
+	margin-top: 142px;
+
+	& h2 {
+		margin: 0;
+		margin-bottom: 26px;
+	}
+}
+
+.live-stream__wrapper {
+	min-height: 416px;
+	border: 1px solid $black;
+}

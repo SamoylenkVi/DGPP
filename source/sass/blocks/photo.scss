@@ -1,0 +1,26 @@
+.photo ul {
+	@include list-default-remove;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	column-gap: 20px;
+	row-gap: 32px;
+}
+
+.photo li {
+ border: 1px solid $black;
+ grid-column: span 2;
+ min-height: 200px;
+
+ &:first-of-type {
+	 grid-column: span 6;
+ }
+
+ &:nth-of-type(2) {
+	 grid-column: span 4;
+ }
+
+ &:nth-of-type(4),
+ &:nth-of-type(5) {
+	 grid-column: span 3;
+ }
+}

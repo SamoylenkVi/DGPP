@@ -1,17 +1,44 @@
+// .scores {
+// 	font-family: $family-neutral;
+// 	font-weight: $bold-font-weight;
+// 	font-size: $scores-font-size;
+// 	line-height: 32px;
+// 	display: inline-block;
+// 	width: 32px;
+// 	height: 32px;
+// 	border-radius: 50%;
+// 	text-align: center;
+// 	vertical-align: bottom;
+// 	background-color: $orange;
+// 	margin-top: -3px;
+// 	margin-left: -3px;
+// 	position: relative;
+
+// 	&::before {
+// 		position: absolute;
+// 		content: "";
+// 		width: 28px;
+// 		height: 28px;
+// 		border: 2px solid black;
+// 		border-radius: 50%;
+// 		top: 50%;
+// 		left: 50%;
+// 		transform: translate3d(-50%, -50%, 10px);
+// 	}
+// }
+
 .scores {
 	font-family: $family-neutral;
 	font-weight: $bold-font-weight;
 	font-size: $scores-font-size;
-	line-height: 32px;
-	display: inline-block;
+	line-height: 12px;
+	display: flex;
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	text-align: center;
-	vertical-align: bottom;
+	justify-content: center;
+	align-items: center;
 	background-color: $orange;
-	margin-top: -3px;
-	margin-left: -3px;
 	position: relative;
 
 	&::before {
@@ -24,20 +51,5 @@
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%, -50%, 10px);
-	}
-
-	&--extra {
-		min-width: 106px;
-		height: 24px;
-		border-radius: 12px;
-		font-size: $base-font-size;
-		line-height: 24px;
-		font-family: $family-inter;
-		font-weight: 500;
-		margin-left: 42px;
-
-		&::before {
-			display: none;
-		}
 	}
 }

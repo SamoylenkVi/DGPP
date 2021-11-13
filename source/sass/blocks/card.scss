@@ -1,0 +1,51 @@
+.card__list {
+	@include list-default-remove;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	gap: 29px;
+}
+
+.card__item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 464px;
+	justify-content: flex-end;
+	border: 1px solid $black;
+
+
+	& h3,
+	& p {
+		margin: 0;
+	}
+
+	& h3 {
+		font-weight: $bold-font-weight;
+		font-size: $leed-mobile-font-size;
+		line-height: $head3-line-height;
+		padding-bottom: 8px;
+	}
+
+	& p {
+		padding-bottom: 40px;
+	}
+}
+
+.card__content {
+	padding: 24px 27px;
+}
+
+.card__scores {
+	position: absolute;
+	top: -6px;
+	right: 16px;
+	width: 64px;
+	height: 64px;
+	font-size: $head3-font-size;
+	line-height: 64px;
+
+	&::before {
+		width: 58px;
+		height: 58px;
+	}
+}

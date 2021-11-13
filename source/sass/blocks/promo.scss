@@ -1,0 +1,38 @@
+.promo__wrapper {
+	min-height: 448px;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid $black;
+	margin-top: 39px;
+	margin-bottom: 26px;
+}
+
+.promo__content {
+	min-height: 220px;
+	width: 500px;
+	border: 1px solid $black;
+	align-self: flex-end;
+	transform: translate3d(20px, 26px, 0);
+	padding: 19px 25px;
+	background-color: $white;
+
+	& h2,
+	& p {
+		margin: 0;
+	}
+
+	& h2 {
+		padding-bottom: 11px;
+	}
+
+	& p {
+		padding-bottom: 32px;
+		font-size: $head3-font-size;
+		line-height: $text-line-height;
+	}
+}
+
+.promo__button {
+	min-width: 244px;
+	background-color: $base-pink;
+}

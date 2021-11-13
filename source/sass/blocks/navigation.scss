@@ -15,6 +15,10 @@
 	& li {
 		margin-left: 32px;
 	}
+
+	&--user {
+		margin-right: 34px;
+	}
 }
 
 .navigation__link {
@@ -24,5 +28,29 @@
 	&:not([href]) {
 		font-weight: $bold-font-weight;
 		border-bottom: 3px solid $base-pink;
+	}
+}
+
+.navigation__user-profile {
+	margin-right: 14px;
+	margin-top: 2px;
+	display: flex;
+	flex-direction: row;
+}
+
+.navigation__picture {
+	width: 56px;
+	height: 56px;
+	border-radius:50%;
+	object-fit: cover;
+}
+.navigation__scores {
+	width: 40.38px;
+	height: 40.12px;
+	margin-right: -15px;
+
+	&::before {
+		width: 36.34px;
+		height: 36.1px;
 	}
 }

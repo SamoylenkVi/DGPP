@@ -1,5 +1,6 @@
 .user-profile__wrapper {
-	padding-top: 57px;
+	padding-top: 44px;
+	padding-left: 16px;
 }
 
 .user-profile__header {
@@ -7,36 +8,95 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: flex-start;
+	flex-wrap: wrap;
 	padding-top: 4px;
 }
 
-.user-profile__picture {
-	border-radius: 50%;
-	object-fit: contain;
+.user-profile__picture-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 4px;
+	flex-shrink: 0;
 }
 
-.user-profile__name {
-	margin: 0;
-	font-size: $title-font-size;
-	line-height: $title-line-height;
-	padding-left: 20px;
+.user-profile__picture {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.user-profile__total-scores {
+	width: 88px;
+	height: 88px;
+	font-size: $head3-font-size;
+	line-height: $head2-mobile-line-height;
+	margin-top: -24px;
+	outline: none;
+	border: none;
+
+	&::before {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+.user__profile__full-name {
+	padding-left: 24px;
+	display: flex;
+	flex-direction: column;
+
+	& h2 {
+		font-size: $title-font-size;
+		line-height: $title-line-height;
+		margin: 0;
+	}
+
+	& p {
+		margin: 0;
+		font-size: $head3-font-size;
+		line-height: $text-line-height;
+		margin-left: -22px;
+		padding-top: 26px;
+	}
+}
+
+.user__profile__buttons {
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	padding-top: 11px;
 }
 
 .user-profile__change-profile {
 	margin-left: auto;
 	min-width: 201px;
-	margin-top: 10px;
+	margin-right: 16px;
+}
+
+.user-profile__log-off {
+	min-width: 99px;
 }
 
 .user-profile__list {
 	@include list-default-remove;
-	padding-top: 54px;
-	padding-left: 3px;
+	padding: 40px 0 0 7px;
 	display: flex;
 	flex-direction: column;
+}
 
-	& li {
-		min-height: 80px;
+.user-profile__block {
+	margin-bottom: 39px;
+}
+
+.user-profile__block--empty {
+	padding-left: 40px;
+	position: relative;
+
+	& .user-profile__label {
+		padding-bottom: 10px;
 	}
 }
 
@@ -53,8 +113,9 @@
 }
 
 .user-profile__scores {
-	margin-top: -3px;
-	margin-left: 2px;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
 }
 
 .user-profile__stepik {

@@ -1,0 +1,45 @@
+.more-points {
+	position: absolute;
+	max-width: 443px;
+	min-height: 462px;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	background-color: $base-pink;
+	padding-top: 112px;
+	padding-bottom: 43px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../img/coin.png");
+	background-repeat: no-repeat;
+	background-position: top 22px left 36px;
+	border: 1px solid $black;
+	box-shadow: 0px 10px 0px -5px #000000;
+
+	&--close {
+		display: none;
+	}
+
+	& h2,
+	& p {
+		margin: 0;
+	}
+}
+
+.more-points__title {
+	padding-bottom: 19px;
+	font-size: $leed-font-size;
+	line-height: $head1-tablet-line-height;
+}
+
+.more-points__text {
+	padding-right: 1em;
+}
+
+.more-points__wrapper {
+	padding-left: 1.6em;
+	padding-right: 3.35em;
+	font-size: $head3-font-size;
+	line-height: $text-line-height;
+}
