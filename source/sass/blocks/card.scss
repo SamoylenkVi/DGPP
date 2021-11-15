@@ -13,7 +13,6 @@
 	justify-content: flex-end;
 	border: 1px solid $black;
 
-
 	& h3,
 	& p {
 		margin: 0;
@@ -24,10 +23,6 @@
 		font-size: $leed-mobile-font-size;
 		line-height: $head3-line-height;
 		padding-bottom: 8px;
-	}
-
-	& p {
-		padding-bottom: 40px;
 	}
 }
 

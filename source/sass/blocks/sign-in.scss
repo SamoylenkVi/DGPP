@@ -2,14 +2,9 @@
 	display: none;
 }
 
-.sign__in {
-	z-index: 5;
-	background-color: $white;
-}
-
-.sign-in {
-	display: none;
-}
+// .sign-in {
+// 	display: none;
+// }
 
 .pop-up__content {
 	width: 700px;
@@ -26,11 +21,15 @@
 
 .sign-in__content {
 	min-height: 544px;
+	z-index: 5;
+	background-color: $white;
 }
 
 .sign-up__content {
 	min-height: 728px;
 	justify-content: flex-start;
+	z-index: 5;
+	background-color: $white;
 }
 
 .pop-up__logo {
@@ -45,6 +44,11 @@
 .pop-up__title {
 	margin: -58px 0 7px;
 }
+
+.sign-in__title {
+	margin-bottom: 15px;
+}
+
 .pop-up__title > span {
 	position: relative;
 
@@ -87,15 +91,19 @@
 
 .sign-up-description {
 	margin: 0;
-	padding: 0 83px 42px 0;
+	padding: 0 83px 0 0;
 	font-size: $head3-font-size;
 	line-height: $text-line-height;
+
+	& span {
+		display: inline-flex;
+	}
 }
 
 .sign-in__wrapper {
 	display: flex;
 	flex-direction: row;
-	margin-top: 40px;
+	// margin-top: 40px;
 }
 
 .sign-in__form {
@@ -103,45 +111,12 @@
 	padding-bottom: 63px;
 }
 
-.pop-up__form input {
-	min-height: 46px;
-	width: 100%;
-	border: none;
-	border-bottom: 1px solid $black;
-	margin-bottom: 40px;
-	transition: 0.5s;
-	line-height: $base-line-height;
-	padding-top: 15px;
-}
 .sign-up__form {
 	max-width: 480px;
 
-	& input {
-		margin-bottom: 42px;
-	}
-}
-
-.pop-up__form > label {
-	font-size: $base-font-size;
-	line-height: 0;
-	display: block;
-	color: #aaa;
-	transform: translate3d(0, -4.4rem, 0);
-	transition: 0.5s;
-}
-
-.pop-up__form > input:focus,
-.pop-up__form > input:valid {
-	min-height: 62px;
-	margin-bottom: 26px;
-	outline: none;
-
-	&:focus + label,
-	&:valid + label {
-		font-size: $small-text-mobile-size;
-		line-height: $small-label-height;
-		transform: translate3d(4px, -5.3rem, 0);
-	}
+	// & input {
+	// 	margin-bottom: 42px;
+	// }
 }
 
 .pop-up__buttons {
@@ -180,13 +155,17 @@
 	padding-top: 39px;
 }
 
+.sign-in__buttons {
+	padding-top: 26px;
+}
+
 .sign-up__button--create {
 	background-color: $base-pink;
-	min-width: 185px;
 	margin-right: 12px;
 }
 
 .sign-in__present {
+	@include link-default-remove;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -213,31 +192,5 @@
 }
 
 .sign-up__agreement {
-	margin-top: -4px;
-}
-
-.sign-up__agreement label {
-	position: relative;
-	font-size: $base-font-size;
-	line-height: $base-line-height;
-	padding-left: 23px;
-
-	&::before {
-		position: absolute;
-		content: "";
-		width: 16px;
-		height: 16px;
-		border: 1px solid $grey;
-		border-radius: 2px;
-		top: 4%;
-		left: 0;
-	}
-}
-
-.sign-up__agreement > input:checked + label {
-	&::before {
-		background-image: url(../img/check.svg);
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-	}
+	margin-top: 25px;
 }

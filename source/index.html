@@ -36,6 +36,9 @@
 					</ul>
 				</nav>
 				<button class="header__button button" aria-label="Войти в личный кабинет" type="button">Личный кабинет</button>
+				<button class="header__toggle button" aria-label="Открыть главное меню" type="button">
+          <span class="header__icon"></span>
+        </button>
 			</div>
 		</header>
 		<main>
@@ -185,10 +188,10 @@
 			<button type="button" class="pop-up__close button__close" aria-label="Закрыть окно"></button>
 			<h2 class="pop-up__title sign-in__title">Вой<span>д</span>ти <br> в личный кабинет</h2>
 			<div class="sign-in__wrapper">
-				<form class="pop-up__form sign-in__form" action="" method="get">
-					<input type="email" id="sign-in-mail" name="sign-in-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
+				<form class="pop-up__form sign-in__form form" action="" method="get">
+					<input class="form__item form__item--sign-in" type="email" id="sign-in-mail" name="sign-in-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" placeholder=" " required>
 					<label for="sign-in-mail">Почта</label>
-					<input name="password" id="password" type="password" required>
+					<input class="form__item form__item--sign-in" name="password" id="password" type="password" placeholder=" " required>
 					<label for="password">Пароль</label>
 					<div class="pop-up__buttons sign-in__buttons">
 						<button class="sign-in__button pop-up__button pop-up__button--in button" type="submit" aria-label="Войти в личный кабинет">Войти</button>
@@ -196,10 +199,10 @@
 						<button class="sign-in__button pop-up__button pop-up__button--create button" type="submit" aria-label="Создать личный кабинет">Создать личный кабинет</button>
 					</div>
 				</form>
-				<div class="sign-in__present">
+				<a href="edit-profile.html"  class="sign-in__present">
 					<h3>Подарок</h3>
 					<p>Фирменный стикерпак для Телеграма <br> и 30 баллов на счёт</p>
-				</div>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -212,14 +215,14 @@
 			<h2 class="pop-up__title sign-up__title">С<span>a</span>здать <br> личный кабинет</h2>
 			<p class="sign-up-description">Всем, кто зарегестрируется свой личный кабинет на нашем сайте, мы дарим стикерпак для Телеграма и <span class="scores">30</span>баллов на счёт, которые можно потратить на подарки от наших партнёров</p>
 			<div class="sign-up__wrapper">
-				<form class="pop-up__form sign-up__form" action="" method="get">
-					<input type="text" id="surname" name="user-surname" aria-label="Введите вашу фамилию" required>
+				<form class="pop-up__form sign-up__form form" action="" method="get">
+					<input class="form__item form__item--sign-up" type="text" id="surname" name="user-surname" aria-label="Введите вашу фамилию" placeholder=" " required>
 					<label for="surname">Фамилия</label>
-					<input type="text" id="name" name="user-name" aria-label="Введите ваше имя" required>
+					<input class="form__item form__item--sign-up" type="text" id="name" name="user-name" aria-label="Введите ваше имя" placeholder=" " required>
 					<label for="name">Имя</label>
-					<input type="email" id="sign-up-mail" name="sign-up-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
+					<input class="form__item form__item--sign-up" type="email" id="sign-up-mail" name="sign-up-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" placeholder=" " required>
 					<label for="sign-up-mail">Почта</label>
-					<div class="sign-up__agreement">
+					<div class="sign-up__agreement form__checkbox">
 						<input class="visually-hidden" type="checkbox" id="sign-up-agreement" name="sign-up-agreement" checked="" aria-label="Соглашение на обработку  персональных данных">
 						<label for="sign-up-agreement">Я согласен на обработку моих персональных данных</label>
 					</div>

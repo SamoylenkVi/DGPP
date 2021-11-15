@@ -1,0 +1,92 @@
+.form__item {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid $black;
+	transition: 0.5s;
+	line-height: $base-line-height;
+	padding-top: 28px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+	outline: none;
+	min-height: 48px;
+	margin-top: 28px;
+
+	&--sign-up {
+		margin-top: 18px;
+	}
+
+	&--sign-in {
+		margin-top: 14px;
+	}
+}
+
+.form__item:placeholder-shown + label {
+	font-size: $base-font-size;
+	transform: translate3d(0, -1.9rem, 0);
+}
+
+.form__item + label {
+	display: block;
+	color: #aaa;
+	transition: 0.5s;
+}
+
+.form__item:focus,
+.form__item {
+	& + label {
+		font-size: $small-text-mobile-size;
+		line-height: $small-label-height;
+		transform: translate3d(0, -3.9rem, 0);
+	}
+}
+
+.form__checkbox label {
+	position: relative;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	padding-left: 23px;
+
+	&::before {
+		position: absolute;
+		content: "";
+		width: 16px;
+		height: 16px;
+		border: 1px solid $grey;
+		border-radius: 2px;
+		top: 4%;
+		left: 0;
+	}
+}
+
+.form__checkbox > input:checked + label {
+	&::before {
+		background-image: url(../img/check.svg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+}
+
+.form__item--hobby,
+.form__item--hobby:focus,
+.form__item--hobby:placeholder-shown {
+	min-height: 144px;
+	resize: none;
+}
+
+.form__item--hobby:placeholder-shown + label {
+	transform: translate3d(0, -8.4rem, 0);
+}
+
+.form__item--hobby + label,
+.form__item--hobby:focus + label {
+	transform: translate3d(0, -9.4rem, 0);
+}
+
+.invalid {
+	color: $invalid;
+	border-color: $invalid;
+
+	& + label {
+		color: $invalid;
+	}
+}

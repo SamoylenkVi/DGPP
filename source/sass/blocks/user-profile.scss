@@ -71,13 +71,9 @@
 }
 
 .user-profile__change-profile {
+	@include link-default-remove;
 	margin-left: auto;
-	min-width: 201px;
 	margin-right: 16px;
-}
-
-.user-profile__log-off {
-	min-width: 99px;
 }
 
 .user-profile__list {

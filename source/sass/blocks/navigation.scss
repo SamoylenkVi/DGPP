@@ -1,6 +1,10 @@
 .navigation {
 	display: flex;
 	align-items: center;
+
+	@include tablet {
+		display: none;
+	}
 }
 
 .navigation__list {
@@ -41,9 +45,10 @@
 .navigation__picture {
 	width: 56px;
 	height: 56px;
-	border-radius:50%;
+	border-radius: 50%;
 	object-fit: cover;
 }
+
 .navigation__scores {
 	width: 40.38px;
 	height: 40.12px;
