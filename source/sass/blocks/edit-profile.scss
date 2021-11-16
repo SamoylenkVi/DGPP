@@ -5,9 +5,10 @@
 .edit-profile__form-content {
 	flex-basis: 50%;
 
-	& figure {
+	& fieldset {
 		margin: 0;
-		padding: 0 53px 0 6px;
+		border: none;
+		padding: 1px 100px 40px 6px;
 	}
 }
 

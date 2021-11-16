@@ -55,16 +55,16 @@
 								<button class="edit-profile__button edit-profile__button--download button" type="button" aria-label="Загрузить фотографию">Загрузить фото</button>
 								<button class="edit-profile__button edit-profile__button--delete button" type="button" aria-label="Удалить фотографию">Удалить</button>
 							</div>
-							<figure>
+							<fieldset>
 								<input class="form__item" type="text" id="surname" name="user-surname" aria-label="Введите вашу фамилию" placeholder=" ">
 								<label for="surname">Фамилия</label>
 								<input class="form__item" type="text" id="name" name="user-name" aria-label="Введите ваше имя" placeholder=" ">
 								<label for="name">Имя</label>
 								<input class="form__item" type="date" id="birthday" name="user-birthday" aria-label="Введите ваш день рождения">
 								<label for="birthday">Рождение</label>
-							</figure>
-							<figure>
-								<figcaption class="edit-profile__form-title edit-profile__form-title--con">Контакты</figcaption>
+							</fieldset>
+							<fieldset>
+								<legend class="edit-profile__form-title edit-profile__form-title--con">Контакты</legend>
 								<input class="form__item" type="email" id="user--mail" name="user--mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" placeholder=" ">
 								<label for="user--mail">Почта</label>
 								<div class="edit-profile__form-item">
@@ -72,16 +72,16 @@
 									<label for="user-phone">Телефон</label>
 									<p class="edit-profile__scores scores">+10</p>
 								</div>
-							</figure>
-							<figure>
-								<figcaption class="edit-profile__form-title">Пароль</figcaption>
+							</fieldset>
+							<fieldset>
+								<legend class="edit-profile__form-title">Пароль</legend>
 								<input class="form__item" id="actual-password" name="actual-password" type="password" placeholder=" ">
 								<label for="actual-password">Текущий пароль</label>
 								<input class="form__item" id="new-password" name="new-password" type="password" placeholder=" ">
 								<label for="new-password">Новый пароль</label>
-							</figure>
-							<figure>
-								<figcaption class="edit-profile__form-title">Остальное</figcaption>
+							</fieldset>
+							<fieldset>
+								<legend class="edit-profile__form-title">Остальное</legend>
 								<div class="edit-profile__form-item">
 									<input class="form__item" type="text" id="city" aria-label="Введите ваш город" placeholder=" ">
 									<label for="city">Город</label>
@@ -101,7 +101,7 @@
 									<label for="hobby">Хобби, увлечения и интересы</label>
 									<p class="edit-profile__scores edit-profile__scores--textarea scores">+10</p>
 								</div>
-							</figure>
+							</fieldset>
 						</div>
 						<div class="edit-profile__buttons user__profile__buttons">
 							<button class="edit-profile__button edit-profile__button--save button" aria-label="Сохранить изменения" type="button">Сохранить</button>
