@@ -1,23 +1,53 @@
 .gifts {
 	background-color: $green;
 	margin-top: 121px;
-	min-height: 675px;
+	min-height: 792px;
+
+	@include tablet {
+		min-height: 690px;
+	}
+
+	@include tablet-v {
+		min-height: 591px;
+	}
+
+	@include mobile-h {
+		margin-top: 75px;
+	}
+}
+
+.gifts__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	@include mobile-h {
+		padding-bottom: 66px;
+	}
 }
 
 .gifts__content {
 	padding: 33px 22px;
-}
+	color: $white;
 
-.gifts__content--kinopoisk {
-	& h3,
-	& p {
-		color: $white;
+	@include tablet-v {
+		padding: 24px 12px;
 	}
 }
 
 .gifts h2 {
 	margin: 0;
-	padding-top: 45px;
+	padding-top: 60px;
+	padding-bottom: 5px;
+
+	@include tablet-v {
+		padding-top: 62px;
+	}
+
+	@include mobile-h {
+		padding-top: 39px;
+	}
 }
 
 .gifts p {
@@ -26,15 +56,83 @@
 
 .gifts__list {
 	margin-top: 29px;
+	padding-left: 3px;
+	width: 100%;
+
+	@include mobile-h {
+		grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+		gap: 30px;
+		margin-top: 19px;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		gap: 22px;
+	}
 }
 
 .gifts__item {
 	background-color: $white;
-	min-height: 440px;
+	min-height: 480px;
+	background-image: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.5) 100%
+	);
+
+	@include tablet {
+		width: 290px;
+		min-height: 389px;
+		justify-self: center;
+	}
+
+	@include tablet-v {
+		width: 226px;
+		min-height: 304px;
+	}
+
+	@include mobile-h {
+		width: 240px;
+		min-height: 323px;
+	}
+
+	@include mobile {
+		width: 290px;
+		min-height: 391px;
+	}
 }
 
 .gifts__item--kinopoisk {
 	background-image: url("../img/kinopoisk.jpg");
 	background-size: cover;
 	position: relative;
+
+	@include tablet {
+		p {
+			font-size: $base-font-size;
+			line-height: $base-mobile-line-height;
+		}
+	}
+}
+
+.gifts__more {
+	align-self: center;
+	margin-top: 40px;
+	background-color: $button-green;
+
+	@include tablet {
+		margin-right: 23px;
+	}
+
+	@include tablet-v {
+		margin-right: 0;
+	}
+
+	@include mobile-h {
+		margin-top: 21px;
+	}
+
+	@include mobile {
+		margin-top: 52px;
+	}
 }

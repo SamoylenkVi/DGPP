@@ -37,8 +37,8 @@
 				</nav>
 				<button class="header__button button" aria-label="Войти в личный кабинет" type="button">Личный кабинет</button>
 				<button class="header__toggle button" aria-label="Открыть главное меню" type="button">
-          <span class="header__icon"></span>
-        </button>
+					<span class="header__icon"></span>
+				</button>
 			</div>
 		</header>
 		<main>
@@ -57,37 +57,43 @@
 				<div class="live-stream__wrapper">
 				</div>
 			</section>
-			<section class="tests wrapper card">
-				<h2>Курсы И Тесты</h2>
-				<ul class="tests__list card__list">
-					<li class="tests__item card__item">
-						<div class="tests__content card__content">
-							<h3>Название</h3>
-							<p>Описание</p>
-							<a href="" class="tests__link button">Пройти</a>
+			<section class="tests card">
+				<div class="tests__wrapper wrapper">
+					<h2>Курсы И Тесты</h2>
+					<ul class="tests__list card__list">
+						<li class="tests__item card__item">
+							<div></div>
+							<div class="tests__content card__content">
+								<h3>Название</h3>
+								<p>Описание</p>
+								<a href="" class="tests__link button">Пройти</a>
+							</div>
+							<p class="tests__scores card__scores scores">+10</p>
+						</li>
+						<li class="tests__item card__item">
+							<div></div>
+							<div class="tests__content card__content">
+								<h3>Название</h3>
+								<p>Описание</p>
+								<a href="" class="tests__link button">Пройти</a>
+							</div>
+							<p class="tests__scores card__scores scores">+100</p>
+						</li>
+						<li class="tests__item card__item tests__item--subscription">
+							<div class="tests__picture tests__picture--subscription"></div>
+							<div class="tests__content tests__content--subscription">
+								<h3>Подпишись на&nbsp;нашу рассылку</h3>
+								<p>Чтобы удобно узнавать о новых играх и тестах</p>
+
+							<form class="tests__form tests__form--subscription">
+								<input type="email" id="mail-subscribe" name="mail" aria-label="Введите ваш email" placeholder="mail@example.ru" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
+								<label for="mail-subscribe"></label>
+								<button type="submit" class="button" aria-label="Подписаться на рассылку">Подписаться</button>
+							</form>
 						</div>
-						<p class="test__scores card__scores scores">+ 10</p>
-					</li>
-					<li class="tests__item card__item">
-						<div class="tests__content card__content">
-							<h3>Название</h3>
-							<p>Описание</p>
-							<a href="" class="tests__link button">Пройти</a>
-						</div>
-						<p class="test__scores card__scores scores">+ 100</p>
-					</li>
-					<li class="tests__item card__item tests__item--subscription">
-						<div class="tests__content tests__content--subscription">
-							<h3>Подпишись на нашу рассылку</h3>
-							<p>Чтобы удобно узнавать о новых играх и тестах</p>
-						</div>
-						<form class="tests__form tests__form--subscription">
-							<input type="email" id="mail-subscribe" name="mail" aria-label="Введите ваш email" placeholder="mail@example.ru" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
-							<label for="mail-subscribe"></label>
-							<button type="submit" class="button" aria-label="Подписаться на рассылку">Подписаться</button>
-						</form>
-					</li>
-				</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="gifts card">
 				<div class="gifts__wrapper wrapper">
@@ -115,6 +121,7 @@
 							<p class="gifts__scores card__scores scores">30</p>
 						</li>
 					</ul>
+					<button class="gifts__more button" type="button" aria-label="Показать больше подарков" >Показать ещё <span>  10 ...</span></button>
 				</div>
 			</section>
 		</main>
@@ -132,7 +139,7 @@
 						<li><a href="">Политика обработки данных</a></li>
 						<li><a href="">Оферта</a></li>
 					</ul>
-					<a href="https://lepekhin.studio/">
+					<a class="footer__link-create" href="https://lepekhin.studio/">
 						<svg width="237" height="41" viewBox="0 0 237 41" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M46.4959 16.1078H45.1394V8.38086H52.0985V16.1078H50.742V9.69444H46.4959V16.1078Z" fill="#B2B2B2" />
 							<path d="M57.6279 8.38086C58.1867 8.38086 58.6791 8.49124 59.1057 8.71202C59.5321 8.93278 59.8592 9.23817 60.0871 9.6282C60.3226 10.0109 60.4403 10.4487 60.4403 10.9418C60.4403 11.4348 60.3226 11.8764 60.0871 12.2664C59.8592 12.6564 59.5321 12.9618 59.1057 13.1826C58.6791 13.396 58.1867 13.5027 57.6279 13.5027H55.5104V16.1078H54.1539V8.38086H57.6279ZM57.5729 12.2002C58.036 12.2002 58.4 12.0861 58.6645 11.858C58.9366 11.6225 59.0727 11.3171 59.0727 10.9418C59.0727 10.5665 58.9401 10.2648 58.6756 10.0366C58.4108 9.80851 58.0433 9.69444 57.5729 9.69444H55.5104V12.2002H57.5729Z" fill="#B2B2B2" />
@@ -185,7 +192,7 @@
 		<div class="pop-up__underlay"></div>
 		<div class="pop-up__content sign-in__content">
 			<img class="pop-up__logo" src="img/logo.svg" width="136" height="111" alt="Логотип Smart Device" loading="lazy">
-			<button type="button" class="pop-up__close button__close" aria-label="Закрыть окно"></button>
+			<button type="button" class="pop-up__close button button--close" aria-label="Закрыть окно"></button>
 			<h2 class="pop-up__title sign-in__title">Вой<span>д</span>ти <br> в личный кабинет</h2>
 			<div class="sign-in__wrapper">
 				<form class="pop-up__form sign-in__form form" action="" method="get">
@@ -199,7 +206,7 @@
 						<button class="sign-in__button pop-up__button pop-up__button--create button" type="submit" aria-label="Создать личный кабинет">Создать личный кабинет</button>
 					</div>
 				</form>
-				<a href="edit-profile.html"  class="sign-in__present">
+				<a href="edit-profile.html" class="sign-in__present">
 					<h3>Подарок</h3>
 					<p>Фирменный стикерпак для Телеграма <br> и 30 баллов на счёт</p>
 				</a>
@@ -211,7 +218,7 @@
 		<div class="pop-up__underlay"></div>
 		<div class="pop-up__content sign-up__content">
 			<img class="pop-up__logo" src="img/logo.svg" width="136" height="111" alt="Логотип Smart Device" loading="lazy">
-			<button type="button" class="pop-up__close button__close" aria-label="Закрыть окно"></button>
+			<button type="button" class="pop-up__close button button--close" aria-label="Закрыть окно"></button>
 			<h2 class="pop-up__title sign-up__title">С<span>a</span>здать <br> личный кабинет</h2>
 			<p class="sign-up-description">Всем, кто зарегестрируется свой личный кабинет на нашем сайте, мы дарим стикерпак для Телеграма и <span class="scores">30</span>баллов на счёт, которые можно потратить на подарки от наших партнёров</p>
 			<div class="sign-up__wrapper">

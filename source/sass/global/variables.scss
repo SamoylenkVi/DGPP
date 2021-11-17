@@ -6,6 +6,7 @@ $base-grey: #e6e6e6;
 $grey: #808080;
 $orange: #ffaa20;
 $green: #00df88;
+$button-green: #00c97a;
 $back-grey: #f2f2f2;
 $footer-grey: #999999;
 $invalid: #ff4000;
@@ -27,6 +28,7 @@ $leed-font-size: 32px;
 $leed-tablet-font-size: 28px;
 $leed-mobile-font-size: 24px;
 $head3-font-size: 20px;
+$head3-tablet-font-size: 22px;
 $base-tablet-font-size: 18px;
 $base-font-size: 16px;
 $small-text-tablet-size: 14px;
@@ -50,15 +52,19 @@ $head2-mobile-line-height: 24px;
 $base-mobile-line-height: 22.4px;
 $base-line-height: 19.2px;
 $small-text-mobile-height: 16.8px;
-$small-label-height: 14.4px;
+$head3-mobile-height: 17.6px;
+$small-label-height: 14px;
 $scores-line-height: 32px;
 
 // Viewports
-$desktop-width: 1024px;
+$desktop-width: 1200px;
+$tablet-h-width:1024px;
 $tablet-width: 768px;
+$mobile-h-width: 568px;
 $mobile-width: 320px;
 
 // Padding
 $desktop-padding: 20px;
-$mobile-padding: 20px;
-$tablet-padding: 15px;
+$tablet-padding: 45px;
+$mobile-h-padding: 29px;
+$tablet-v-padding: 15px;

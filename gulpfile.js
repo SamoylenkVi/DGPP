@@ -27,7 +27,7 @@ const minStyles = () => {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(sync.stream());
 }
 
@@ -43,7 +43,7 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(rename("style.css"))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
 }
 
 exports.styles = styles;
@@ -57,7 +57,7 @@ const normalize = () => {
     ]))
     .pipe(csso())
     .pipe(rename("normalize.min.css"))
-    .pipe(gulp.dest("build/css/vendor"))
+    .pipe(gulp.dest("docs/css/vendor"))
 }
 
 exports.normalize = normalize;
@@ -71,7 +71,7 @@ const images = () => {
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.images = images;
@@ -83,7 +83,7 @@ const sprite = () => {
     .pipe(imagemin([imagemin.svgo()]))
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.sprite = sprite;
@@ -93,7 +93,7 @@ exports.sprite = sprite;
 const createwebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.createwebp = createwebp;
@@ -106,7 +106,7 @@ const html = () => {
       collapseWhitespace: true,
       ignoreCustomFragments: [/(\s\<br\>|\<br\>\s)/gi]
     }))
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("docs"))
     .pipe(sync.stream())
 }
 
@@ -118,7 +118,7 @@ const script = () => {
   return gulp.src("source/js/script.js")
     .pipe(rename("script.min.js"))
     .pipe(uglify())
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("docs/js"))
     .pipe(sync.stream());
 }
 
@@ -134,7 +134,7 @@ const copy = () => {
     {
       base: "source"
     })
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("docs"))
 }
 
 exports.copy = copy;
@@ -142,7 +142,7 @@ exports.copy = copy;
 //Clean
 
 const clean = () => {
-  return del("build");
+  return del("docs");
 }
 
 // Server
@@ -150,7 +150,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'docs'
     },
     cors: true,
     notify: false,
@@ -169,9 +169,9 @@ const watcher = () => {
   gulp.watch("source/js/*.js", gulp.series("script"));
 }
 
-//Build
+//docs
 
-const build = gulp.series(
+const docs = gulp.series(
   clean,
   gulp.parallel(
     script,
@@ -186,10 +186,10 @@ const build = gulp.series(
   )
 )
 
-exports.build = build;
+exports.docs = docs;
 
 exports.default = gulp.series(
-  build,
+  docs,
   server,
   watcher
 )

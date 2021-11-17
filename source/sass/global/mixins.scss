@@ -24,7 +24,19 @@
 }
 
 @mixin mobile {
+  @media (max-width: $mobile-h-width - 1) {
+    @content;
+  }
+}
+
+@mixin mobile-h {
   @media (max-width: $tablet-width - 1) {
+    @content;
+  }
+}
+
+@mixin tablet-v {
+  @media (max-width: $tablet-h-width - 1) {
     @content;
   }
 }

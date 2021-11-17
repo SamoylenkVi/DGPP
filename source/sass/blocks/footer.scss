@@ -2,8 +2,18 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	min-height: 369px;
-	padding: 34px 29px 34px 28px;
+	min-height: 376px;
+	padding-top: 34px;
+
+	@include tablet {
+		min-height: 409px;
+		padding-top: 38px;
+		padding-bottom: 36px;
+	}
+
+	@include mobile-h {
+		min-height: 461px;
+	}
 }
 
 .footer__heading,
@@ -20,6 +30,15 @@
 .footer__links {
 	align-items: flex-end;
 	margin-top: 22px;
+
+	@include tablet {
+		margin-top: 24px;
+	}
+
+	@include mobile-h {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 
 .footer__list {
@@ -28,12 +47,25 @@
 	line-height: $text-line-height;
 	color: $footer-grey;
 
-	& li {
+	li {
 		padding-top: 18px;
 	}
 
-	& p {
+	p {
 		margin: 0;
+	}
+
+	@include tablet {
+		padding-bottom: 7px;
+
+		li {
+			padding-top: 14px;
+		}
+
+		a {
+			font-size: $base-tablet-font-size;
+			line-height: $base-tablet-line-height;
+		}
 	}
 }
 
@@ -44,4 +76,20 @@
 .footer__link-scroll {
 	min-height: 48px;
 	background-color: $base-grey;
+
+	@include tablet-v {
+		margin-right: 7px;
+	}
+}
+
+.footer__link-create {
+	padding-right: 5px;
+
+	@include tablet {
+		padding-right: 11px;
+	}
+
+	@include mobile-h {
+		margin-top: 32px;
+	}
 }

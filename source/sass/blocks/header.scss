@@ -12,11 +12,34 @@
 	align-items: center;
 	margin-top: 32px;
 	padding-left: 130px;
+
+	@include tablet {
+		min-height: 70px;
+		margin-top: 30px;
+	}
+
+	@include mobile-h {
+		min-height: 61px;
+		margin-top: 25px;
+	}
+
+	@include mobile {
+		margin-top: 16px;
+	}
 }
 
 .header__logo {
 	position: absolute;
 	left: 0;
+
+	@include tablet {
+		width: 111.93px;
+		height: 97.69px;
+	}
+
+	@include mobile-h {
+		width: 98.93px;
+	}
 }
 
 .header__button {
@@ -42,50 +65,62 @@
 			transform: translate3d(0, -50%, 0);
 		}
 	}
+
+	@include tablet {
+		margin-right: 7px;
+	}
+
+	@include mobile-h {
+		display: none;
+	}
 }
 
 .header__toggle {
 	position: relative;
-  display: none;
-  border: none;
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
+	display: none;
+	border: none;
+	cursor: pointer;
+	width: 48px;
+	height: 48px;
 	margin-right: 16px;
 
-  &:active {
-    opacity: 20%;
-  }
+	&:active {
+		opacity: 20%;
+	}
 
-  @include tablet {
-    display: flex;
-  }
+	@include tablet {
+		display: flex;
+	}
+
+	@include mobile-h {
+		margin-right: 0;
+	}
 }
 
 .header__icon,
 .header__icon::before,
 .header__icon::after {
-  @include tablet {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 2px;
-    background-color: $black;
-  }
+	@include tablet {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 19px;
+		height: 2px;
+		background-color: $black;
+	}
 }
 
 .header__icon::before,
 .header__icon::after {
-  content: "";
-  transition: 0.3s;
+	content: "";
+	transition: 0.3s;
 }
 
 .header__icon::before {
-  transform: translate(-50%, -9px);
+	transform: translate(-50%, -7px);
 }
 
 .header__icon::after {
-  transform: translate(-50%, 7px);
+	transform: translate(-50%, 5px);
 }

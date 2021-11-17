@@ -1,10 +1,31 @@
 .promo__wrapper {
-	min-height: 448px;
+	min-height: 502px;
 	display: flex;
 	flex-direction: row;
 	border: 1px solid $black;
-	margin-top: 39px;
+	margin-top: 50px;
 	margin-bottom: 26px;
+
+	@include tablet {
+		min-height: 402px;
+		margin-top: 51px;
+	}
+
+	@include tablet-v {
+		margin-top: 34px;
+		min-height: 321px;
+	}
+
+	@include mobile-h {
+		min-height: 220px;
+		margin-bottom: 119px;
+	}
+
+	@include mobile {
+		margin-top: 26px;
+		min-height: 290px;
+		margin-bottom: 148px;
+	}
 }
 
 .promo__content {
@@ -12,26 +33,59 @@
 	width: 500px;
 	border: 1px solid $black;
 	align-self: flex-end;
-	transform: translate3d(20px, 26px, 0);
+	transform: translate3d(15px, 32px, 0);
 	padding: 19px 25px;
 	background-color: $white;
 
-	& h2,
-	& p {
+	h2,
+	p {
 		margin: 0;
 	}
 
-	& h2 {
+	h2 {
 		padding-bottom: 11px;
 	}
 
-	& p {
+	p {
 		padding-bottom: 32px;
 		font-size: $head3-font-size;
 		line-height: $text-line-height;
+	}
+
+	@include tablet {
+		min-height: 207px;
+		transform: translate3d(15px, 24px, 0);
+		padding: 21px 22px;
+
+		p {
+			font-size: $base-tablet-font-size;
+			line-height: $base-tablet-line-height;
+		}
+	}
+
+	@include mobile-h {
+		width: 322px;
+		min-height: 186px;
+		transform: translate3d(7px, 121px, 0);
+		padding: 18px 15px;
+
+		p {
+			font-size: $small-text-mobile-size;
+			line-height: $small-text-mobile-height;
+			padding-bottom: 35px;
+		}
+	}
+
+	@include mobile {
+		width: 274px;
+		transform: translate3d(7px, 151px, 0);
 	}
 }
 
 .promo__button {
 	background-color: $base-pink;
+
+	@include mobile {
+		padding: 13px 23px 14px;
+	}
 }

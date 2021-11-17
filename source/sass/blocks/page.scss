@@ -8,4 +8,14 @@
 h2 {
 	@include font-options($family-neutral, $title-mobile-font-size, $title-mobile-line-height, $bold-font-weight, $black);
 	text-transform: uppercase;
+
+	@include tablet {
+		font-size: $leed-font-size;
+		line-height: $head1-tablet-line-height;
+	}
+
+	@include mobile-h {
+		font-size: $head3-font-size;
+		line-height: $head2-mobile-line-height;
+	}
 }

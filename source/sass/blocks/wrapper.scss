@@ -1,6 +1,27 @@
 .wrapper {
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding-left: $desktop-padding;
 	padding-right: $desktop-padding;
+
+	@include tablet {
+		padding-left: $tablet-padding;
+		padding-right: $tablet-padding;
+	}
+
+	@include tablet-v {
+		max-width: 960px;
+		padding-left: $tablet-v-padding;
+		padding-right: $tablet-v-padding;
+	}
+
+	@include mobile-h {
+		padding-left: $mobile-h-padding;
+		padding-right: $mobile-h-padding;
+	}
+
+	@include mobile {
+		padding-left: $tablet-v-padding;
+		padding-right: $tablet-v-padding;
+	}
 }

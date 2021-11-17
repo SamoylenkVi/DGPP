@@ -1,13 +1,46 @@
 .live-stream {
-	margin-top: 142px;
+	margin-top: 77px;
 
-	& h2 {
+	h2 {
 		margin: 0;
 		margin-bottom: 26px;
+	}
+
+	@include tablet {
+		margin-top: 141px;
+	}
+
+	@include mobile-h {
+		padding-top: 90px;
+		margin-top: 0;
+
+		h2 {
+			margin-bottom: 17px;
+		}
+	}
+
+	@include mobile {
+		padding-top: 78px;
 	}
 }
 
 .live-stream__wrapper {
 	min-height: 416px;
 	border: 1px solid $black;
+
+	@include tablet {
+		min-height: 416px;
+	}
+
+	@include tablet-v {
+		min-height: 331px;
+	}
+
+	@include mobile-h {
+		min-height: 229px;
+	}
+
+	@include mobile {
+		min-height: 131px;
+	}
 }

@@ -1,15 +1,19 @@
 .card__list {
 	@include list-default-remove;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-	gap: 29px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+
+	@include tablet {
+		gap: 26px;
+	}
 }
 
 .card__item {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	min-height: 464px;
+	min-height: 489px;
 	justify-content: flex-end;
 	border: 1px solid $black;
 
@@ -24,16 +28,55 @@
 		line-height: $head3-line-height;
 		padding-bottom: 8px;
 	}
+
+	@include tablet {
+		min-height: 478px;
+
+		& h3 {
+			font-size: $head3-tablet-font-size;
+			line-height: $head2-mobile-line-height;
+		}
+
+		& p {
+			font-size: $small-label-height;
+		}
+	}
+
+	@include mobile-h {
+		h3 {
+			font-size: $base-font-size;
+			line-height: $head3-mobile-height;
+		}
+
+		p {
+			font-size: $small-text-mobile-size;
+			line-height: $small-text-mobile-height;
+		}
+	}
+
+	@include mobile {
+		width: 290px;
+		justify-self: center;
+
+	}
 }
 
 .card__content {
-	padding: 24px 27px;
+	padding: 23px;
+
+	@include tablet {
+		padding: 22px;
+	}
+
+	@include mobile-h {
+		padding: 15px;
+	}
 }
 
 .card__scores {
 	position: absolute;
-	top: -6px;
-	right: 16px;
+	top: -16px;
+	right: 6px;
 	width: 64px;
 	height: 64px;
 	font-size: $head3-font-size;
@@ -42,5 +85,10 @@
 	&::before {
 		width: 58px;
 		height: 58px;
+	}
+
+	@include tablet {
+		top: -16px;
+		right: 9px;
 	}
 }
