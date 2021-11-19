@@ -1,0 +1,246 @@
+.subscription {
+	min-height: 530px;
+	background-color: $base-pink;
+	margin-bottom: 0;
+	padding-bottom: 15px;
+	position: relative;
+	justify-content: space-between;
+
+	@include tablet {
+		min-height: 505px;
+	}
+
+	@include tablet-v {
+		grid-column: span 2;
+		min-height: 198px;
+		padding: 2px 47px 10px 29px;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-start;
+		order: 1;
+	}
+
+	@include mobile-h {
+		padding: 0 32px 27px 19px;
+	}
+
+	@include mobile {
+		grid-column: span 1;
+		flex-direction: column;
+		margin-top: 16px;
+	}
+}
+
+.subscription__picture {
+	flex-shrink: 0;
+	align-self: center;
+	background-image: url("../img/pushkin.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	transform: translate3d(0, -22px, 0);
+	width: 222px;
+	height: 222px;
+	position: relative;
+
+	&::after {
+		content: "Я вызываю вас на рассылку!";
+		position: absolute;
+		bottom: -6px;
+		left: -20px;
+		background-image: url("../img/message.png");
+		background-repeat: no-repeat;
+		width: 138px;
+		height: 64px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		color: white;
+		padding: 10px 10px 10px 17px;
+	}
+
+	@include tablet {
+		height: 180px;
+		width: 180px;
+
+		&::after {
+			bottom: -27px;
+			left: -29px;
+		}
+	}
+
+	@include tablet-v {
+		height: 166px;
+		width: 166px;
+		transform: translate3d(0, -30px, 0);
+
+		&::after {
+			bottom: -29px;
+			left: -36px;
+		}
+	}
+
+	@include mobile-h {
+		transform: translate3d(0, -59px, 0);
+		width: 144px;
+		height: 144px;
+
+		&::after {
+			width: 139px;
+			height: 53px;
+			background-size: contain;
+			bottom: -23px;
+			left: -34px;
+			font-size: $small-text-mobile-size;
+			line-height: $small-label-height;
+			padding: 13px 20px 9px;
+		}
+	}
+
+	@include mobile {
+		transform: translate3d(0, -26px, 0);
+		margin-left: 11px;
+
+		&::after {
+			width: 132px;
+			height: 51px;
+			bottom: -21px;
+			left: -43px;
+		}
+	}
+}
+
+.subscription__content-wrapper {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 2px 29px 32px;
+
+	@include tablet {
+		padding: 9px 13px 31px;
+	}
+
+	@include tablet-v {
+		padding: 9px 0 24px 18px;
+		flex-grow: 1;
+		align-items: flex-start;
+	}
+
+	@include mobile-h {
+		padding-left: 14px;
+	}
+}
+
+.subscription__content h3 {
+	padding-bottom: 12px;
+	text-align: center;
+
+	@include tablet {
+		padding: 12px 22px;
+	}
+
+	@include tablet-v {
+		padding: 12px 0;
+		font-size: $head3-tablet-font-size;
+		line-height: $head2-mobile-line-height;
+		text-align: start;
+	}
+
+	@include mobile-h {
+		font-size: $base-font-size;
+		line-height: $head3-mobile-height;
+		padding: 16px 0 10px;
+	}
+
+	@include mobile {
+		text-align: center;
+		padding: 10px 32px 14px;
+	}
+}
+
+.subscription__content p {
+	padding: 0;
+	padding-bottom: 32px;
+	text-align: center;
+
+	@include tablet-v {
+		padding-bottom: 23px;
+		text-align: start;
+	}
+
+	@include mobile-h {
+		padding-bottom: 32px;
+	}
+
+	@include mobile {
+		text-align: center;
+	}
+}
+
+.subscription__form {
+	padding: 5px 0 2px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	& input {
+		padding: 4px 1px 9px;
+		min-height: 48px;
+		border: none;
+		border-bottom: 1px solid $black;
+		background-color: transparent;
+		margin-bottom: 23px;
+		outline: none;
+		width: 100%;
+	}
+
+	& button {
+		background-color: $black;
+		color: $white;
+	}
+
+	@include tablet {
+		padding: 5px 20px 2px;
+	}
+
+	@include tablet-v {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-end;
+		padding: 0;
+
+		& input {
+			margin-right: 21px;
+			margin-bottom: 2px;
+		}
+
+		& button {
+			padding: 14px 28px 15px;
+		}
+	}
+
+	@include mobile-h {
+		flex-direction: column;
+		align-items: flex-start;
+
+		input {
+			margin: 0;
+			padding-top: 4px;
+			margin-bottom: 0;
+		}
+
+		button {
+			margin: 9px 0 0;
+			padding: 16px 24px 15px;
+		}
+	}
+
+	@include mobile {
+		button {
+			margin-top: 24px;
+			width: 100%;
+		}
+	}
+}
