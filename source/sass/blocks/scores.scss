@@ -40,6 +40,7 @@
 	align-items: center;
 	background-color: $orange;
 	position: relative;
+	z-index: 10;
 
 	&::before {
 		position: absolute;

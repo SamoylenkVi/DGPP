@@ -40,6 +40,10 @@
 	margin-top: 2px;
 	display: flex;
 	flex-direction: row;
+
+	@include mobile-h {
+		display: none;
+	}
 }
 
 .navigation__picture {

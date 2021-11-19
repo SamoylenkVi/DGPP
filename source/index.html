@@ -62,7 +62,7 @@
 					<h2>Курсы И Тесты</h2>
 					<ul class="tests__list card__list">
 						<li class="tests__item card__item">
-							<div></div>
+							<img class="tests__picture" src="img/test1.png" width="360" height="270" alt="Людмила Вербицкая: найти общий язык">
 							<div class="tests__content card__content">
 								<h3>Название</h3>
 								<p>Описание</p>
@@ -71,7 +71,7 @@
 							<p class="tests__scores card__scores scores">+10</p>
 						</li>
 						<li class="tests__item card__item">
-							<div></div>
+							<img class="tests__picture" src="img/test2.png" width="360" height="270" alt="Людмила Вербицкая: найти общий язык">
 							<div class="tests__content card__content">
 								<h3>Название</h3>
 								<p>Описание</p>
@@ -79,18 +79,19 @@
 							</div>
 							<p class="tests__scores card__scores scores">+100</p>
 						</li>
-						<li class="tests__item card__item tests__item--subscription">
-							<div class="tests__picture tests__picture--subscription"></div>
-							<div class="tests__content tests__content--subscription">
-								<h3>Подпишись на&nbsp;нашу рассылку</h3>
-								<p>Чтобы удобно узнавать о новых играх и тестах</p>
-
-							<form class="tests__form tests__form--subscription">
-								<input type="email" id="mail-subscribe" name="mail" aria-label="Введите ваш email" placeholder="mail@example.ru" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
-								<label for="mail-subscribe"></label>
-								<button type="submit" class="button" aria-label="Подписаться на рассылку">Подписаться</button>
-							</form>
-						</div>
+						<li class="tests__item card__item subscription">
+							<div class="subscription__picture"></div>
+							<div class="subscription__content-wrapper">
+								<div class="subscription__content">
+									<h3>Подпишись на&nbsp;нашу рассылку</h3>
+									<p>Чтобы удобно узнавать о новых играх и тестах</p>
+								</div>
+								<form class="subscription__form">
+									<input type="email" id="mail-subscribe" name="mail" aria-label="Введите ваш email" placeholder="mail@example.ru" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
+									<label for="mail-subscribe"></label>
+									<button type="submit" class="button" aria-label="Подписаться на рассылку">Подписаться</button>
+								</form>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -100,6 +101,7 @@
 					<h2>Лавка подарков</h2>
 					<ul class="gifts__list card__list">
 						<li class="gifts__item card__item">
+							<img class="gifts__picture" src="img/inter.jpg" width="360" height="480" alt="описание подарка">
 							<div class="gifts__content card__content">
 								<h3>Название</h3>
 								<p>Описание</p>
@@ -107,6 +109,7 @@
 							<p class="gifts__scores card__scores scores">30</p>
 						</li>
 						<li class="gifts__item card__item">
+							<img class="gifts__picture" src="img/stickerpack.png" width="360" height="480" alt="описание подарка">
 							<div class="gifts__content card__content">
 								<h3>Название</h3>
 								<p>Описание</p>
@@ -114,6 +117,7 @@
 							<p class="gifts__scores card__scores scores">30</p>
 						</li>
 						<li class="gifts__item gifts__item--kinopoisk card__item">
+							<img class="gifts__picture" src="img/kinopoisk.jpg" width="360" height="480" alt="описание подарка">
 							<div class="gifts__content gifts__content--kinopoisk card__content">
 								<h3>Бесплатная <br> подписка</h3>
 								<p>Три месяца кино, сериалов и телевидения</p>
@@ -121,7 +125,7 @@
 							<p class="gifts__scores card__scores scores">30</p>
 						</li>
 					</ul>
-					<button class="gifts__more button" type="button" aria-label="Показать больше подарков" >Показать ещё <span>  10 ...</span></button>
+					<button class="gifts__more button" type="button" aria-label="Показать больше подарков">Показать ещё <span> 10 ...</span></button>
 				</div>
 			</section>
 		</main>

@@ -94,6 +94,7 @@
 
 	@include mobile-h {
 		margin-right: 0;
+		background-color: transparent;
 	}
 }
 
@@ -118,9 +119,9 @@
 }
 
 .header__icon::before {
-	transform: translate(-50%, -7px);
+	transform: translate(-53%, -7px);
 }
 
 .header__icon::after {
-	transform: translate(-50%, 5px);
+	transform: translate(-53%, 5px);
 }

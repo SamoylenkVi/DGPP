@@ -5,7 +5,23 @@
 	gap: 40px;
 
 	@include tablet {
-		gap: 26px;
+		grid-template-columns: repeat(auto-fit,290px);
+    justify-content: center;
+    gap: 30px;
+	}
+
+	@include tablet-v {
+		grid-template-columns: repeat(auto-fit, 226px);
+		gap: 28px;
+	}
+
+	@include mobile-h {
+		grid-template-columns: repeat(auto-fit, 237px);
+	}
+
+	@include mobile {
+		grid-template-columns: repeat(auto-fit, 290px);
+		gap: 22px;
 	}
 }
 
