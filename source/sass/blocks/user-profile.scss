@@ -1,6 +1,13 @@
 .user-profile__wrapper {
 	padding-top: 44px;
-	padding-left: 16px;
+
+	@include mobile-h {
+		padding-top: 25px;
+	}
+
+	@include mobile {
+		padding-top: 26px;
+	}
 }
 
 .user-profile__header {
@@ -10,6 +17,29 @@
 	align-items: flex-start;
 	flex-wrap: wrap;
 	padding-top: 4px;
+
+	@include mobile-h {
+		flex-direction: column;
+	}
+
+	@include mobile {
+		flex-direction: row;
+	}
+}
+
+.user-profile__header-content {
+	display: flex;
+	flex-direction: row;
+
+	@include mobile-h {
+		padding-top: 29px;
+	}
+
+	@include mobile {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0;
+	}
 }
 
 .user-profile__picture-wrapper {
@@ -18,7 +48,16 @@
 	justify-content: center;
 	align-items: center;
 	padding-top: 4px;
+	padding-left: 7px;
 	flex-shrink: 0;
+
+	@include tablet {
+		padding-left: 2px;
+	}
+
+	@include mobile {
+		flex-direction: row;
+	}
 }
 
 .user-profile__picture {
@@ -26,6 +65,16 @@
 	height: 160px;
 	border-radius: 50%;
 	object-fit: cover;
+
+	@include tablet {
+		width: 130px;
+		height: 130px;
+	}
+
+	@include mobile-h {
+		width: 100px;
+		height: 100px;
+	}
 }
 
 .user-profile__total-scores {
@@ -41,6 +90,28 @@
 		width: 80px;
 		height: 80px;
 	}
+
+	@include tablet {
+		margin-top: -30px;
+	}
+
+	@include mobile-h {
+		width: 64px;
+		height: 64px;
+		font-size: $small-text-tablet-size;
+		line-height: $small-text-mobile-height;
+		margin-top: -23px;
+
+		&::before {
+			width: 56px;
+			height: 56px;
+		}
+	}
+
+	@include mobile {
+		margin-top: -1px;
+    margin-left: -25px;
+	}
 }
 
 .user__profile__full-name {
@@ -48,18 +119,64 @@
 	display: flex;
 	flex-direction: column;
 
-	& h2 {
+	h2 {
 		font-size: $title-font-size;
 		line-height: $title-line-height;
 		margin: 0;
 	}
 
-	& p {
+	p {
 		margin: 0;
 		font-size: $head3-font-size;
 		line-height: $text-line-height;
-		margin-left: -22px;
-		padding-top: 26px;
+		margin-left: -24px;
+		padding-top: 24px;
+	}
+
+	@include tablet {
+		padding-top: 7px;
+
+		h2 {
+			font-size: $title-tablet-font-size;
+			line-height: $title-tablet-line-height;
+		}
+
+		p {
+			padding-top: 19px;
+			margin-left: -20px;
+			font-size: $base-tablet-font-size;
+			line-height: $base-tablet-line-height;
+		}
+	}
+
+	@include tablet-v {
+		padding-left: 15px;
+
+		p {
+			margin-left: -21px;
+		}
+	}
+
+	@include mobile-h {
+		padding-top: 15px;
+
+		h2 {
+			font-size: $leed-font-size;
+			line-height: $head1-tablet-line-height;
+		}
+
+		p {
+			font-size: $small-text-tablet-size;
+			line-height: $base-line-height;
+		}
+	}
+
+	@include mobile {
+		padding-left: 0;
+
+		p {
+			display: none;
+		}
 	}
 }
 
@@ -68,12 +185,66 @@
 	flex-direction: row;
 	margin-left: auto;
 	padding-top: 11px;
+
+	@include tablet {
+		padding-top: 14px;
+	}
+
+	@include tablet-v {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	@include mobile-h {
+		margin-left: 0;
+		flex-direction: row;
+		order: -1;
+	}
+
+	@include mobile {
+		order: 0;
+		padding-top: 4px;
+	}
 }
 
-.user-profile__change-profile {
+.user-profile__button--edit {
 	@include link-default-remove;
 	margin-left: auto;
 	margin-right: 16px;
+
+	@include tablet-v {
+		margin-right: 0;
+		margin-bottom: 18px;
+	}
+
+	@include mobile-h {
+		margin-bottom: 0;
+		margin-right: 13px;
+	}
+
+	@include mobile {
+		margin-right: 12px;
+	}
+}
+
+.user-profile__button {
+	@include mobile {
+		padding: 24px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		span {
+			display: none;
+		}
+
+		&--edit {
+			background-image: url("../img/edit.svg");
+		}
+
+		&--out {
+			background-image: url("../img/log-off.svg");
+		}
+	}
 }
 
 .user-profile__list {
@@ -81,10 +252,18 @@
 	padding: 40px 0 0 7px;
 	display: flex;
 	flex-direction: column;
+
+	@include tablet {
+		padding-left: 2px;
+	}
 }
 
 .user-profile__block {
 	margin-bottom: 39px;
+
+	@include mobile-h {
+		margin-bottom: 45px;
+	}
 }
 
 .user-profile__block--empty {
@@ -106,6 +285,18 @@
 
 .user-profile__item {
 	margin: 0;
+	font-size: $head3-font-size;
+	line-height: $text-line-height;
+
+	@include tablet {
+		font-size: $base-tablet-font-size;
+		line-height: $base-tablet-line-height;
+	}
+
+	@include mobile-h {
+		font-size: $small-text-tablet-size;
+		line-height: $base-line-height;
+	}
 }
 
 .user-profile__scores {

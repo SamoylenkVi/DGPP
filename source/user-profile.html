@@ -40,8 +40,8 @@
 					<img class="navigation__picture" src="img/user.jpg" alt="Фотография пользователя" width="56" height="56" loading="lazy">
 				</div>
 				<button class="header__toggle button" aria-label="Открыть главное меню" type="button">
-          <span class="header__icon"></span>
-        </button>
+					<span class="header__icon"></span>
+				</button>
 			</div>
 		</header>
 		<main>
@@ -49,18 +49,20 @@
 			<section class="user-profile">
 				<div class="user-profile__wrapper wrapper">
 					<div class="user-profile__header">
-						<div class="user-profile__picture-wrapper">
-							<img class="user-profile__picture" src="img/user.jpg" alt="Фотография пользователя" width="160" height="160" loading="lazy">
-							<button class="user-profile__total-scores scores">1200</button>
-						</div>
-						<div class="user__profile__full-name">
-							<h2 class="user-profile__surname">Фамилия</h2>
-							<h2 class="user-profile__name">Имя</h2>
-							<p>← Ваш счёт с баллами</p>
+						<div class="user-profile__header-content">
+							<div class="user-profile__picture-wrapper">
+								<img class="user-profile__picture" src="img/user.jpg" alt="Фотография пользователя" width="160" height="160" loading="lazy">
+								<button class="user-profile__total-scores scores">1200</button>
+							</div>
+							<div class="user__profile__full-name">
+								<h2 class="user-profile__surname">Фамилия</h2>
+								<h2 class="user-profile__name">Имя</h2>
+								<p>← Ваш счёт с баллами</p>
+							</div>
 						</div>
 						<div class="user__profile__buttons">
-							<a href="edit-profile.html" class="user-profile__change-profile button">Изменить профиль</a>
-							<button class="user-profile__log-off button" aria-label="Выйти из профиля" type="button">Выйти</button>
+							<a href="edit-profile.html" class="user-profile__button  user-profile__button--edit button"><span>Изменить профиль</span></a>
+							<button class="user-profile__button user-profile__button--out button" aria-label="Выйти из профиля" type="button"><span>Выйти</span></button>
 						</div>
 					</div>
 					<ul class="user-profile__list">
@@ -100,16 +102,25 @@
 					<h2>Связь с сервисами</h2>
 					<ul class="service-connection__list">
 						<li class="service-connection__item">
-							<img src="img/logo-stepik.svg" width="72" height="74" alt="Логотип платформы Stepik" loading="lazy">
-							<h3>Stepik</h3>
-							<p>Учебная платформа</p>
+							<div class="service-connection__content">
+								<img src="img/logo-stepik.svg" width="72" height="74" alt="Логотип платформы Stepik" loading="lazy">
+								<div>
+									<h3>Stepik</h3>
+									<p>Учебная платформа</p>
+								</div>
+							</div>
 							<button class="service-connection__button service-connection__button--bind button">Подключить</button>
 						</li>
 						<li class="service-connection__item service-connection__item--untie">
-							<img src="img/logo-stepik.svg" width="72" height="74" alt="Логотип платформы Stepik" loading="lazy">
-							<h3>Stepik</h3>
-							<p>ID 1234567890</p>
+							<div class="service-connection__content">
+								<img src="img/logo-stepik.svg" width="72" height="74" alt="Логотип платформы Stepik" loading="lazy">
+								<div>
+									<h3>Stepik</h3>
+									<p>ID 1234567890</p>
+								</div>
+							</div>
 							<button class="service-connection__button service-connection__button--untie button">Отвязать</button>
+							<span class="service-connection__status"></span>
 						</li>
 					</ul>
 				</div>
@@ -119,19 +130,23 @@
 					<h2>Ваши подарки</h2>
 					<ul class="user-gifts__list">
 						<li class="user-gifts__item">
-							<!-- <img src="" width="204" height="154" alt="Описание подарка"> -->
+							<img src="" width="204" height="154" alt="Описание подарка">
 							<div class="user-gifts__description">
-								<h3>Название</h3>
-								<p>Описание</p>
-								<button class="user-gifts__copy-button button">Копировать промокод</button>
+								<div>
+									<h3>Название</h3>
+									<p>Описание</p>
+								</div>
+								<button class="user-gifts__get-present user-gifts__get-present--get button"><span>Копировать промокод</span></button>
 							</div>
 						</li>
 						<li class="user-gifts__item">
-							<!-- <img src="" width="204" height="154" alt="Описание подарка"> -->
+							<img width="204" height="154" alt="Описание подарка">
 							<div class="user-gifts__description">
-								<h3>Название</h3>
-								<p>Описание</p>
-								<button class="user-gifts__copy-button button">Получить подарок</button>
+								<div>
+									<h3>Название</h3>
+									<p>Описание</p>
+								</div>
+								<button class="user-gifts__get-present user-gifts__get-present--copy button"><span>Получить подарок</span></button>
 							</div>
 						</li>
 					</ul>
@@ -205,7 +220,7 @@
 		<button class="more-points__close button__close"></button>
 		<div class="more-points__wrapper">
 			<h2 class="more-points__title">Заработайте больше бонусов</h2>
-			<p class="more-points__text">Сейчас у вас на счету <span>1200</span> баллов, чтобы заработать больше, проходите тесты, учавствуйте в конкурсах и  мероприятиях. Баллы можно потратить в нашем магазине   </p>
+			<p class="more-points__text">Сейчас у вас на счету <span>1200</span> баллов, чтобы заработать больше, проходите тесты, учавствуйте в конкурсах и  мероприятиях. Баллы можно потратить в нашем магазине </p>
 		</div>
 	</section>
 	<script src="js/script.min.js" async></script>
