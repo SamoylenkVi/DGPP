@@ -74,6 +74,22 @@ img {
   display: flex;
   flex-direction: column; }
 
+h1 {
+  font-family: "Neutral Face", "Roboto", sans-serif;
+  font-size: 64px;
+  line-height: 76.8px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase; }
+  @media (max-width: 1199px) {
+    h1 {
+      font-size: 48px;
+      line-height: 57.6px; } }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 32px;
+      line-height: 38.4px; } }
+
 h2 {
   font-family: "Neutral Face", "Roboto", sans-serif;
   font-size: 40px;
@@ -1082,70 +1098,70 @@ h2 {
       margin-top: -1px;
       margin-left: -25px; } }
 
-.user__profile__full-name {
+.user-profile__full-name {
   padding-left: 24px;
   display: flex;
   flex-direction: column; }
-  .user__profile__full-name h2 {
+  .user-profile__full-name h2 {
     font-size: 64px;
     line-height: 76.8px;
     margin: 0; }
-  .user__profile__full-name p {
+  .user-profile__full-name p {
     margin: 0;
     font-size: 20px;
     line-height: 28px;
     margin-left: -24px;
     padding-top: 24px; }
   @media (max-width: 1199px) {
-    .user__profile__full-name {
+    .user-profile__full-name {
       padding-top: 7px; }
-      .user__profile__full-name h2 {
+      .user-profile__full-name h2 {
         font-size: 48px;
         line-height: 57.6px; }
-      .user__profile__full-name p {
+      .user-profile__full-name p {
         padding-top: 19px;
         margin-left: -20px;
         font-size: 18px;
         line-height: 25.2px; } }
   @media (max-width: 1023px) {
-    .user__profile__full-name {
+    .user-profile__full-name {
       padding-left: 15px; }
-      .user__profile__full-name p {
+      .user-profile__full-name p {
         margin-left: -21px; } }
   @media (max-width: 767px) {
-    .user__profile__full-name {
+    .user-profile__full-name {
       padding-top: 15px; }
-      .user__profile__full-name h2 {
+      .user-profile__full-name h2 {
         font-size: 32px;
         line-height: 38.4px; }
-      .user__profile__full-name p {
+      .user-profile__full-name p {
         font-size: 14px;
         line-height: 19.2px; } }
   @media (max-width: 567px) {
-    .user__profile__full-name {
+    .user-profile__full-name {
       padding-left: 0; }
-      .user__profile__full-name p {
+      .user-profile__full-name p {
         display: none; } }
 
-.user__profile__buttons {
+.user-profile__buttons {
   display: flex;
   flex-direction: row;
   margin-left: auto;
   padding-top: 11px; }
   @media (max-width: 1199px) {
-    .user__profile__buttons {
+    .user-profile__buttons {
       padding-top: 14px; } }
   @media (max-width: 1023px) {
-    .user__profile__buttons {
+    .user-profile__buttons {
       flex-direction: column;
       align-items: flex-end; } }
   @media (max-width: 767px) {
-    .user__profile__buttons {
+    .user-profile__buttons {
       margin-left: 0;
       flex-direction: row;
       order: -1; } }
   @media (max-width: 567px) {
-    .user__profile__buttons {
+    .user-profile__buttons {
       order: 0;
       padding-top: 4px; } }
 
@@ -1774,6 +1790,60 @@ h2 {
   border-color: #ff4000; }
   .invalid + label {
     color: #ff4000; }
+
+.create-password {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 47px;
+  padding-bottom: 6px; }
+  @media (max-width: 1199px) {
+    .create-password {
+      padding-bottom: 3px; } }
+  @media (max-width: 767px) {
+    .create-password {
+      max-width: 562px; } }
+
+.create-password__title {
+  margin: 0;
+  text-align: center; }
+
+.create-password__form {
+  width: 360px;
+  display: flex;
+  flex-direction: column; }
+  @media (max-width: 1199px) {
+    .create-password__form {
+      width: 450px; } }
+  @media (max-width: 1023px) {
+    .create-password__form {
+      width: 354px; } }
+  @media (max-width: 767px) {
+    .create-password__form {
+      width: 330px; } }
+  @media (max-width: 567px) {
+    .create-password__form {
+      width: 100%; } }
+
+.create-password__button {
+  margin-top: 17px; }
+  .create-password__button--save {
+    background-color: #ffc7eb; }
+  .create-password__button--back {
+    text-decoration: none;
+    outline: none;
+    color: inherit; }
+
+.new-password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 761px; }
+
+.new-password__title {
+  margin: 0;
+  text-align: center; }
 
 .sign-up {
   display: none; }
