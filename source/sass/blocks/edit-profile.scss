@@ -1,14 +1,59 @@
 .edit-profile {
 	padding-top: 44px;
+
+	@include mobile-h {
+		padding-top: 34px;
+	}
+}
+
+.edit-profile__form {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+
+	@include mobile-h {
+		flex-direction: column;
+	}
 }
 
 .edit-profile__form-content {
-	flex-basis: 50%;
+	flex-basis: 42%;
 
-	& fieldset {
+	fieldset {
 		margin: 0;
 		border: none;
-		padding: 1px 100px 40px 6px;
+		padding: 1px 60px 40px 1px;
+	}
+
+	@include tablet {
+		flex-basis: 55%;
+
+		fieldset {
+			padding-right: 62px;
+		}
+	}
+
+	@include tablet-v {
+		flex-basis: 65%;
+
+		fieldset {
+			padding-right: 59px;
+		}
+	}
+
+	@include mobile-h {
+		flex-basis: 0;
+		width: 100%;
+
+		fieldset {
+			padding-bottom: 43px;
+		}
+	}
+
+	@include mobile {
+		fieldset {
+			padding-right: 0;
+		}
 	}
 }
 
@@ -18,6 +63,18 @@
 	flex-wrap: wrap;
 	align-items: center;
 	padding-top: 8px;
+
+	@include tablet {
+		padding-bottom: 12px;
+	}
+
+	@include mobile-h {
+		padding-left: 8px;
+	}
+
+	@include mobile {
+		padding-left: 0;
+	}
 }
 
 .edit-profile__button {
@@ -26,22 +83,63 @@
 	&--save {
 		background-color: $base-pink;
 	}
+
+	@include tablet-v {
+		&--save,
+		&--cancel {
+			margin-bottom: 20px;
+		}
+	}
+
+	@include mobile-h {
+		&--save,
+		&--cancel {
+			margin-left: 0;
+			margin-right: 14px;
+		}
+	}
+
+	@include mobile {
+		&--download,
+		&--delete {
+			padding: 24px;
+			background-position: center center;
+			background-repeat: no-repeat;
+
+			span {
+				display: none;
+			}
+		}
+
+		&--download {
+			background-image: url("../img/download.svg");
+		}
+
+		&--delete {
+			background-image: url("../img/delete.svg");
+		}
+	}
 }
 
 .edit-profile__buttons {
 	position: sticky;
 	top: 0;
 	padding-top: 15px;
+
+
+	@include tablet-v {
+		padding-top: 17px;
+	}
+
+	@include mobile-h {
+		position: static;
+		order: 1;
+		padding-top: 0;
+	}
 }
 
 .edit-profile__form-wrapper {
 	padding-left: 5px;
-}
-
-.edit-profile__form {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
 }
 
 .edit-profile__form-title {
@@ -49,15 +147,24 @@
 	font-size: $leed-mobile-font-size;
 	line-height: $head3-line-height;
 	font-weight: $bold-font-weight;
-	margin: 43px 0 12px;
 
-	&--con {
-		margin-bottom: 0;
+	@include tablet {
+		font-size: $head3-tablet-font-size;
+		line-height: $head2-mobile-line-height;
+	}
+
+	@include mobile-h {
+		font-size: $base-font-size;
+		line-height: $head3-mobile-height;
 	}
 }
 
 .edit-profile__form-item {
 	position: relative;
+
+	@include mobile {
+		padding-right: 47px;
+	}
 }
 
 .edit-profile__scores {
@@ -68,7 +175,29 @@
 
 	&--textarea {
 		top: 0;
-		transform: translateY(22px);
+		transform: translate3d(3px, 23px, 0);
+	}
+
+	@include tablet-v {
+		right: -56px;
+		transform: translateY(-14px);
+
+		&--textarea {
+			transform: translate3d(-1px, 24px, 0);
+		}
+	}
+
+	@include mobile-h {
+		right: -59px;
+		transform: translateY(-12px);
+
+		&--textarea {
+			transform: translate3d(-1px, 24px, 0);
+		}
+	}
+
+	@include mobile {
+		right: 0;
 	}
 }
 
