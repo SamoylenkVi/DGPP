@@ -1,22 +1,5 @@
-.sign-up {
+.sign-in--close {
 	display: none;
-}
-
-.sign-in {
-	display: none;
-}
-
-.pop-up__content {
-	width: 700px;
-	position: absolute;
-	left: 50%;
-	top: 0;
-	transform: translate3d(-50%, 50%, 0);
-	border: 1px solid $black;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	padding: 40px 30.5px 0 40px;
 }
 
 .sign-in__content {
@@ -25,44 +8,8 @@
 	background-color: $white;
 }
 
-.sign-up__content {
-	min-height: 728px;
-	justify-content: flex-start;
-	z-index: 5;
-	background-color: $white;
-}
-
-.pop-up__logo {
-	margin-left: auto;
-	transform: rotate(7.93deg);
-	margin-top: -63px;
-	margin-right: 22px;
-	width: 142px;
-	height: 117px;
-}
-
-.pop-up__title {
-	margin: -58px 0 7px;
-}
-
 .sign-in__title {
 	margin-bottom: 15px;
-}
-
-.pop-up__title > span {
-	position: relative;
-
-	&::before {
-		position: absolute;
-		content: "";
-		top: 8px;
-		left: 3px;
-		background-image: url(../img/error.svg);
-		background-repeat: no-repeat;
-		width: 40px;
-		height: 42px;
-		z-index: 1;
-	}
 }
 
 .sign-in__title > span {
@@ -72,31 +19,6 @@
 		background-image: url(../img/error.svg);
 		width: 40px;
 		height: 42px;
-	}
-}
-
-.sign-up__title {
-	margin-bottom: 21px;
-}
-
-.sign-up__title > span {
-	&::before {
-		background-image: url(../img/error-a.svg);
-		top: -16px;
-		left: -2px;
-		width: 40px;
-		height: 64px;
-	}
-}
-
-.sign-up-description {
-	margin: 0;
-	padding: 0 83px 0 0;
-	font-size: $head3-font-size;
-	line-height: $text-line-height;
-
-	& span {
-		display: inline-flex;
 	}
 }
 
@@ -111,57 +33,8 @@
 	padding-bottom: 63px;
 }
 
-.sign-up__form {
-	max-width: 480px;
-
-	// & input {
-	// 	margin-bottom: 42px;
-	// }
-}
-
-.pop-up__buttons {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.pop-up__button {
-	border-radius: 4px;
-	background-color: $base-grey;
-	margin-bottom: 16px;
-
-	&--in {
-		background-color: $base-pink;
-		min-width: 96px;
-		margin-right: 16px;
-	}
-
-	&--recovery {
-		@include link-default-remove;
-		min-width: 189px;
-	}
-
-	&--create {
-		flex-grow: 1;
-		width: 100%;
-	}
-
-	&--reset {
-		min-width: 128px;
-	}
-}
-
-.sign-up__buttons {
-	padding-top: 39px;
-}
-
 .sign-in__buttons {
 	padding-top: 26px;
-}
-
-.sign-up__button--create {
-	background-color: $base-pink;
-	margin-right: 12px;
 }
 
 .sign-in__present {
@@ -189,8 +62,4 @@
 		padding-bottom: 38px;
 		padding-right: 34px;
 	}
-}
-
-.sign-up__agreement {
-	margin-top: 25px;
 }

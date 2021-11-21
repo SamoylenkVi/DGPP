@@ -1,0 +1,47 @@
+.restore--close {
+	display: none;
+}
+
+.restore__content {
+	min-height: 451px;
+	justify-content: flex-start;
+}
+
+.restore__title {
+	margin: -58px 164px 0 0;
+}
+
+.restore__description {
+	padding: 10px 138px 1px 0;
+}
+
+.restore__buttons {
+	padding-top: 21px;
+}
+
+.restore__form {
+	max-width: 301px;
+}
+
+.restore__button {
+	margin-right: 15px;
+
+	&--enter {
+		background-color: $base-pink;
+	}
+}
+
+.restore__title > span {
+	position: relative;
+	z-index: 1;
+
+	&::before {
+		background-image: url(../img/error-c.svg);
+		top: -21px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 34px;
+		height: 40px;
+		z-index: 5;
+	}
+}

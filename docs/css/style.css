@@ -1839,20 +1839,71 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 761px; }
+  max-width: 761px;
+  padding-top: 191px;
+  position: relative; }
+  .new-password::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/check-green.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    top: 0;
+    transform: translate3d(-50%, 43%, 0); }
+  @media (max-width: 1199px) {
+    .new-password {
+      padding-top: 176px;
+      max-width: 617px;
+      padding-bottom: 4px; }
+      .new-password::before {
+        width: 104px;
+        height: 104px;
+        transform: translate3d(-50%, 50%, 0); } }
+  @media (max-width: 767px) {
+    .new-password {
+      padding-top: 144px;
+      max-width: 329px;
+      padding-bottom: 4px; }
+      .new-password::before {
+        width: 72px;
+        height: 72px;
+        transform: translate3d(-50%, 70%, 0); } }
+  @media (max-width: 567px) {
+    .new-password {
+      max-width: 100%; } }
 
 .new-password__title {
   margin: 0;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 28px; }
 
-.sign-up {
-  display: none; }
-
-.sign-in {
-  display: none; }
+.new-password__button {
+  min-width: 360px;
+  margin-top: 16px; }
+  .new-password__button--enter {
+    background-color: #ffc7eb; }
+  .new-password__button--back {
+    text-decoration: none;
+    outline: none;
+    color: inherit; }
+  @media (max-width: 1199px) {
+    .new-password__button {
+      min-width: 288px; } }
+  @media (max-width: 1023px) {
+    .new-password__button {
+      min-width: 354px; } }
+  @media (max-width: 767px) {
+    .new-password__button {
+      min-width: 330px; } }
+  @media (max-width: 567px) {
+    .new-password__button {
+      min-width: 290px; } }
 
 .pop-up__content {
-  width: 700px;
+  width: 760px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -1861,16 +1912,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 40px 30.5px 0 40px; }
-
-.sign-in__content {
-  min-height: 544px;
-  z-index: 5;
-  background-color: #ffffff; }
-
-.sign-up__content {
-  min-height: 728px;
-  justify-content: flex-start;
+  padding: 40px 30.5px 0 40px;
   z-index: 5;
   background-color: #ffffff; }
 
@@ -1885,8 +1927,10 @@ h2 {
 .pop-up__title {
   margin: -58px 0 7px; }
 
-.sign-in__title {
-  margin-bottom: 15px; }
+.pop-up__description {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px; }
 
 .pop-up__title > span {
   position: relative; }
@@ -1900,42 +1944,6 @@ h2 {
     width: 40px;
     height: 42px;
     z-index: 1; }
-
-.sign-in__title > span::before {
-  top: 8px;
-  left: 3px;
-  background-image: url(../img/error.svg);
-  width: 40px;
-  height: 42px; }
-
-.sign-up__title {
-  margin-bottom: 21px; }
-
-.sign-up__title > span::before {
-  background-image: url(../img/error-a.svg);
-  top: -16px;
-  left: -2px;
-  width: 40px;
-  height: 64px; }
-
-.sign-up-description {
-  margin: 0;
-  padding: 0 83px 0 0;
-  font-size: 20px;
-  line-height: 28px; }
-  .sign-up-description span {
-    display: inline-flex; }
-
-.sign-in__wrapper {
-  display: flex;
-  flex-direction: row; }
-
-.sign-in__form {
-  max-width: 301px;
-  padding-bottom: 63px; }
-
-.sign-up__form {
-  max-width: 480px; }
 
 .pop-up__buttons {
   display: flex;
@@ -1961,15 +1969,34 @@ h2 {
   .pop-up__button--reset {
     min-width: 128px; }
 
-.sign-up__buttons {
-  padding-top: 39px; }
+.sign-in {
+  display: none; }
+
+.sign-in__content {
+  min-height: 544px;
+  z-index: 5;
+  background-color: #ffffff; }
+
+.sign-in__title {
+  margin-bottom: 15px; }
+
+.sign-in__title > span::before {
+  top: 8px;
+  left: 3px;
+  background-image: url(../img/error.svg);
+  width: 40px;
+  height: 42px; }
+
+.sign-in__wrapper {
+  display: flex;
+  flex-direction: row; }
+
+.sign-in__form {
+  max-width: 301px;
+  padding-bottom: 63px; }
 
 .sign-in__buttons {
   padding-top: 26px; }
-
-.sign-up__button--create {
-  background-color: #ffc7eb;
-  margin-right: 12px; }
 
 .sign-in__present {
   text-decoration: none;
@@ -1995,8 +2022,60 @@ h2 {
     padding-bottom: 38px;
     padding-right: 34px; }
 
+.sign-up {
+  display: none; }
+
+.sign-up__content {
+  min-height: 728px;
+  justify-content: flex-start;
+  z-index: 5;
+  background-color: #ffffff; }
+
+.sign-up__title {
+  margin-bottom: 21px; }
+
+.sign-up__title > span::before {
+  background-image: url(../img/error-a.svg);
+  top: -16px;
+  left: -2px;
+  width: 40px;
+  height: 64px; }
+
+.sign-up__description span {
+  display: inline-flex; }
+
+.sign-up__form {
+  max-width: 480px; }
+
+.sign-up__buttons {
+  padding-top: 39px; }
+
+.sign-up__button--create {
+  background-color: #ffc7eb;
+  margin-right: 12px; }
+
 .sign-up__agreement {
   margin-top: 25px; }
+
+.restore__content {
+  min-height: 451px;
+  justify-content: flex-start; }
+
+.restore__title {
+  margin: -58px 164px 0 0; }
+
+.restore__description {
+  padding: 10px 138px 1px 0; }
+
+.restore__buttons {
+  padding-top: 21px; }
+
+.restore__form {
+  max-width: 301px;
+  margin-right: 15px; }
+
+.restore__button--enter {
+  background-color: #ffc7eb; }
 
 .more-points {
   position: absolute;

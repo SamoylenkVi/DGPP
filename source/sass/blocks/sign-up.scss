@@ -1,0 +1,51 @@
+.sign-up--close {
+	display: none;
+}
+
+.sign-up__content {
+	min-height: 728px;
+	justify-content: flex-start;
+	z-index: 5;
+	background-color: $white;
+}
+
+.sign-up__title {
+	margin-bottom: 21px;
+}
+
+.sign-up__title > span {
+	&::before {
+		background-image: url(../img/error-a.svg);
+		top: -16px;
+		left: -2px;
+		width: 40px;
+		height: 64px;
+	}
+}
+
+.sign-up__description {
+	& span {
+		display: inline-flex;
+	}
+}
+
+.sign-up__form {
+	max-width: 480px;
+
+	// & input {
+	// 	margin-bottom: 42px;
+	// }
+}
+
+.sign-up__buttons {
+	padding-top: 39px;
+}
+
+.sign-up__button--create {
+	background-color: $base-pink;
+	margin-right: 12px;
+}
+
+.sign-up__agreement {
+	margin-top: 25px;
+}

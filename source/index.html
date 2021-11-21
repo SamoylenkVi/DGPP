@@ -190,7 +190,7 @@
 		</footer>
 	</div>
 
-	<section class="pop-up sign-in">
+	<section class="pop-up sign-in sign-in--close">
 		<div class="pop-up__underlay"></div>
 		<div class="pop-up__content sign-in__content">
 			<img class="pop-up__logo" src="img/logo.svg" width="136" height="111" alt="Логотип Smart Device" loading="lazy">
@@ -216,13 +216,13 @@
 		</div>
 	</section>
 
-	<section class="pop-up sign-up">
+	<section class="pop-up sign-up sign-up--close">
 		<div class="pop-up__underlay"></div>
 		<div class="pop-up__content sign-up__content">
 			<img class="pop-up__logo" src="img/logo.svg" width="136" height="111" alt="Логотип Smart Device" loading="lazy">
 			<button type="button" class="pop-up__close button button--close" aria-label="Закрыть окно"></button>
 			<h2 class="pop-up__title sign-up__title">С<span>a</span>здать <br> личный кабинет</h2>
-			<p class="sign-up-description">Всем, кто зарегестрируется свой личный кабинет на нашем сайте, мы дарим стикерпак для Телеграма и <span class="scores">30</span>баллов на счёт, которые можно потратить на подарки от наших партнёров</p>
+			<p class="pop-up__description sign-up__description">Всем, кто зарегестрируется свой личный кабинет на нашем сайте, мы дарим стикерпак для Телеграма и <span class="scores">30</span>баллов на счёт, которые можно потратить на подарки от наших партнёров</p>
 			<div class="sign-up__wrapper">
 				<form class="pop-up__form sign-up__form form" action="" method="get">
 					<input class="form__item form__item--sign-up" type="text" id="surname" name="user-surname" aria-label="Введите вашу фамилию" placeholder=" " required>
@@ -238,6 +238,26 @@
 					<div class="pop-up__buttons sign-up__buttons">
 						<button class="sign-up__button sign-up__button--create pop-up__button button" type="submit" aria-label="Создать кабинет">Создать кабинет</button>
 						<button class="sign-up__button  pop-up__button pop-up__button--reset button" type="submit" aria-label="Отменить">Отменить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="pop-up restore restore--close">
+		<div class="pop-up__underlay"></div>
+		<div class="pop-up__content restore__content">
+			<img class="pop-up__logo" src="img/logo.svg" width="136" height="111" alt="Логотип Smart Device" loading="lazy">
+			<button type="button" class="pop-up__close button button--close" aria-label="Закрыть окно"></button>
+			<h2 class="pop-up__title restore__title">Во<span>ст</span>ановить пароль</h2>
+			<p class="pop-up__description restore__description">Введите почту, на которую создавали личный кабинет, на нё мы вышлем ссылку для создания нового пароля </p>
+			<div class="restore__wrapper">
+				<form class="pop-up__form restore__form form" action="" method="get">
+					<input class="form__item form__item--restore" type="email" id="restore-mail" name="restore-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" placeholder=" " required>
+					<label for="restore-mail">Почта</label>
+					<div class="pop-up__buttons restore__buttons">
+						<button class="restore__button restore__button--enter pop-up__button button" type="submit" aria-label="Войти">Войти</button>
+						<button class="restore__button  pop-up__button pop-up__button--reset button" type="submit" aria-label="Отменить">Отменить</button>
 					</div>
 				</form>
 			</div>
