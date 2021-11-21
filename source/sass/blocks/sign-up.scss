@@ -24,17 +24,16 @@
 }
 
 .sign-up__description {
+	padding-right: 117px;
 	& span {
 		display: inline-flex;
+		vertical-align: middle;
+		margin-top: -1px;
 	}
 }
 
 .sign-up__form {
 	max-width: 480px;
-
-	// & input {
-	// 	margin-bottom: 42px;
-	// }
 }
 
 .sign-up__buttons {

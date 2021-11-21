@@ -1,9 +1,9 @@
 .footer__wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	min-height: 376px;
-	padding-top: 34px;
+	padding-top: 37px;
 
 	@include tablet {
 		min-height: 409px;

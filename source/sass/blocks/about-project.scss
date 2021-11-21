@@ -1,0 +1,153 @@
+.about-project {
+	padding-top: 86px;
+	font-size: $head3-font-size;
+	line-height: $text-line-height;
+
+	@include tablet {
+		font-size: $base-tablet-font-size;
+		line-height: $base-tablet-line-height;
+	}
+
+	@include tablet-v {
+		padding-top: 64px;
+	}
+
+	@include mobile-h {
+		padding-top: 48px;
+		font-size: $small-text-tablet-size;
+		line-height: $base-line-height;
+	}
+}
+
+.about-project h1 {
+	margin: 0;
+	padding-bottom: 38px;
+
+	@include mobile-h {
+		padding-bottom: 25px;
+	}
+}
+
+.about-project__description {
+	margin: 0;
+	font-size: $leed-font-size;
+	line-height: $leed-line-height;
+
+	@include tablet {
+		font-size: $leed-mobile-font-size;
+		line-height: $leed-mobile-line-height;
+	}
+
+	@include mobile-h {
+		font-size: $head3-font-size;
+		line-height: $text-line-height;
+	}
+}
+
+.about-project__list {
+	@include list-default-remove;
+}
+
+.about-project__item {
+	margin-top: 78px;
+
+	@include mobile-h {
+		margin-top: 40px;
+	}
+}
+
+.about-project h2 {
+	margin: 0;
+	padding-bottom: 18px;
+}
+
+.about-project__item p,
+.about-project__order-list li {
+	max-width: 860px;
+
+	@include tablet {
+		max-width: 690px;
+	}
+
+	@include tablet-v {
+		max-width: 100%;
+		padding-right: 79px;
+	}
+
+	@include mobile-h {
+		padding-right: 61px;
+	}
+
+	@include mobile {
+		padding-right: 0;
+	}
+}
+
+.about-project__item p {
+	margin: 0;
+	margin-bottom: 19px;
+}
+
+.about-project__order-list {
+	padding-left: 29px;
+
+	@include mobile {
+		padding-left: 20px;
+	}
+}
+
+.about-project__order-list li {
+	margin-bottom: 20px;
+
+	@include tablet {
+		margin-bottom: 16px;
+	}
+}
+
+.about-project__contest {
+	display: flex;
+	flex-direction: row;
+}
+
+.about-project__contest p {
+	margin: 0;
+
+	@include tablet-v {
+		max-width: 545px;
+		padding-right: 0;
+	}
+
+	@include mobile {
+		max-width: 100%;
+	}
+}
+
+.about-project__participants-number {
+	padding-left: 40px;
+
+	h2 {
+		padding-bottom: 0;
+	}
+
+	@include tablet {
+		padding-left: 32px;
+	}
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.about-project__participants-number p {
+	font-size: $base-font-size;
+	line-height: $base-mobile-line-height;
+
+	@include tablet {
+		font-size: $small-text-tablet-size;
+		line-height: $base-line-height;
+	}
+
+	@include tablet-v {
+		padding-right: 44px;
+	}
+}

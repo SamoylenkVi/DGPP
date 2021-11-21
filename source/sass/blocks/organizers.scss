@@ -1,0 +1,36 @@
+.organizers__wrapper {
+	padding-top: 61px;
+}
+
+.organizers__title {
+	margin: 0;
+}
+
+.organizers__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 260px);
+	justify-content: center;
+	gap: 40px;
+	font-size: $base-font-size;
+	line-height: $base-mobile-line-height;
+	padding-top: 27px;
+	padding-bottom: 76px;
+}
+
+.organizers__list figure {
+	margin: 0;
+}
+
+.organizers__list img {
+	object-fit: cover;
+}
+
+.organizers__list figcaption {
+	font-weight: $bold-font-weight;
+	padding-top: 10px;
+}
+
+.organizers__list p {
+	font-weight: 500;
+	margin: 0;
+}
