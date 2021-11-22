@@ -1,0 +1,197 @@
+.memorial {
+	padding-top: 62px;
+
+	@include mobile-h {
+		padding-top: 47px;
+	}
+}
+
+.memorial h1 {
+	margin: 0;
+	padding-bottom: 39px;
+
+	@include mobile-h {
+		padding-bottom: 27px;
+	}
+}
+
+.memorial h2 {
+	font-family: $family-inter;
+	margin: 0;
+	font-weight: $medium-font-weight;
+	font-size: $leed-font-size;
+	line-height: $leed-line-height;
+	text-transform: none;
+	padding-bottom: 37px;
+
+	@include tablet {
+		font-size: $leed-mobile-font-size;
+		line-height: $leed-mobile-line-height;
+	}
+
+	@include mobile-h {
+		font-size: $head3-font-size;
+		line-height: $text-line-height;
+		padding-bottom: 32px;
+	}
+}
+
+.memorial__wrapper p {
+	margin: 0;
+	font-size: $head3-font-size;
+	line-height: $text-line-height;
+	padding-bottom: 20px;
+
+	@include tablet {
+		padding-bottom: 18px;
+		font-size: $base-tablet-font-size;
+		line-height: $base-tablet-line-height;
+	}
+
+	@include tablet-v {
+		padding-bottom: 17px;
+	}
+
+	@include mobile-h {
+		font-size: $small-text-tablet-size;
+		line-height: $base-line-height;
+	}
+}
+
+.memorial__wrapper > p,
+.memorial__wrapper blockquote {
+	padding-right: 304px;
+
+	@include tablet {
+		padding-right: 246px;
+	}
+
+	@include tablet-v {
+		padding-right: 70px;
+	}
+
+	@include mobile-h {
+		padding-right: 2px;
+	}
+}
+
+.memorial__wrapper blockquote {
+	margin: 0;
+	font-family: $family-cormorant;
+	font-style: italic;
+	font-weight: $semibold-font-weight;
+	font-size: $title-tablet-font-size;
+	line-height: $title-tablet-line-height;
+	padding-top: 21px;
+	padding-bottom: 39px;
+
+	@include tablet {
+		font-size: $quote-tablet-font-size;
+		line-height: $quote-tablet-line-height;
+	}
+
+	@include mobile-h {
+		font-size: $leed-mobile-font-size;
+		line-height: $text-line-height;
+		padding-top: 26px;
+		padding-bottom: 34px;
+	}
+
+	@include mobile {
+		padding-top: 46px;
+	}
+}
+
+.memorial__content {
+	display: grid;
+	grid-template-columns: 6fr 2fr;
+	column-gap: 38px;
+	padding-top: 29px;
+
+	@include tablet {
+		padding-top: 22px;
+		column-gap: 17px;
+	}
+
+	@include tablet-v {
+		padding-top: 29px;
+	}
+
+	@include mobile-h {
+		padding-top: 26px;
+		grid-template-columns: 6fr 3fr;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		padding-top: 40px;
+	}
+}
+
+.memorial__poster {
+	grid-row: span 2;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-top: 137px;
+	flex-shrink: 0;
+
+	p {
+		font-size: $base-font-size;
+		line-height: $base-mobile-line-height;
+		margin: 0;
+		padding: 16px 15px 18px 20px;
+	}
+
+	@include tablet {
+		padding-top: 127px;
+
+		p {
+			font-size: $small-text-tablet-size;
+			line-height: $base-line-height;
+			padding: 16px 4px 14px 17px;
+		}
+	}
+
+	@include tablet-v {
+		padding-top: 152px;
+	}
+
+	@include mobile-h {
+		padding-top: 139px;
+		p {
+			font-size: $small-text-mobile-size;
+			line-height: $small-text-mobile-height;
+			padding: 9px 21px 19px 14px;
+		}
+	}
+
+	@include mobile {
+		padding-top: 20px;
+		padding-bottom: 31px;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		p {
+			padding: 2px 12px 19px 10px;
+		}
+	}
+}
+
+.memorial__poster img {
+	@include tablet {
+		width: 210px;
+		height: 311px;
+	}
+
+	@include tablet-v {
+		width: 162px;
+		height: 240px;
+	}
+
+	@include mobile-h {
+		width: 150px;
+		height: 222px;
+	}
+}

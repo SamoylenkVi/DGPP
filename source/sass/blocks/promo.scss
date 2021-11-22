@@ -2,9 +2,10 @@
 	min-height: 502px;
 	display: flex;
 	flex-direction: row;
-	border: 1px solid $black;
 	margin-top: 50px;
 	margin-bottom: 26px;
+	background-image: url("../img/promo.jpg");
+	background-size: cover;
 
 	@include tablet {
 		min-height: 402px;

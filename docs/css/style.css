@@ -37,7 +37,7 @@
 html {
   font-family: "Inter", "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 19.2px;
+  line-height: 19.6px;
   font-weight: 500;
   color: #000000;
   box-sizing: border-box; }
@@ -360,9 +360,10 @@ h2 {
   min-height: 502px;
   display: flex;
   flex-direction: row;
-  border: 1px solid #000000;
   margin-top: 50px;
-  margin-bottom: 26px; }
+  margin-bottom: 26px;
+  background-image: url("../img/promo.jpg");
+  background-size: cover; }
   @media (max-width: 1199px) {
     .promo__wrapper {
       min-height: 402px;
@@ -931,9 +932,9 @@ h2 {
 .footer__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-height: 376px;
-  padding-top: 34px; }
+  padding-top: 37px; }
   @media (max-width: 1199px) {
     .footer__wrapper {
       min-height: 409px;
@@ -1136,7 +1137,7 @@ h2 {
         line-height: 38.4px; }
       .user-profile__full-name p {
         font-size: 14px;
-        line-height: 19.2px; } }
+        line-height: 19.6px; } }
   @media (max-width: 567px) {
     .user-profile__full-name {
       padding-left: 0; }
@@ -1236,7 +1237,7 @@ h2 {
   @media (max-width: 767px) {
     .user-profile__item {
       font-size: 14px;
-      line-height: 19.2px; } }
+      line-height: 19.6px; } }
 
 .user-profile__scores {
   position: absolute;
@@ -1489,7 +1490,7 @@ h2 {
         line-height: 24px; }
       .user-gifts__description p {
         font-size: 14px;
-        line-height: 19.2px; } }
+        line-height: 19.6px; } }
   @media (max-width: 1023px) {
     .user-gifts__description {
       flex-grow: 1;
@@ -1605,7 +1606,7 @@ h2 {
       line-height: 24px; }
     .service-connection__item p {
       font-size: 14px;
-      line-height: 19.2px;
+      line-height: 19.6px;
       padding-bottom: 31px; }
     .service-connection__item--untie {
       padding-bottom: 33px; } }
@@ -1688,33 +1689,12 @@ h2 {
       top: 4px;
       left: 6px; } }
 
-.photo ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  row-gap: 32px; }
-
-.photo li {
-  border: 1px solid #000000;
-  grid-column: span 2;
-  min-height: 200px; }
-  .photo li:first-of-type {
-    grid-column: span 6; }
-  .photo li:nth-of-type(2) {
-    grid-column: span 4; }
-  .photo li:nth-of-type(4), .photo li:nth-of-type(5) {
-    grid-column: span 3; }
-
 .form__item {
   width: 100%;
   border: none;
   border-bottom: 1px solid #000000;
   transition: 0.5s;
-  line-height: 19.2px;
+  line-height: 19.6px;
   padding-top: 28px;
   padding-bottom: 12px;
   padding-left: 0px;
@@ -1748,7 +1728,7 @@ h2 {
 .form__checkbox label {
   position: relative;
   font-size: 16px;
-  line-height: 19.2px;
+  line-height: 19.6px;
   padding-left: 23px; }
   .form__checkbox label::before {
     position: absolute;
@@ -2027,6 +2007,9 @@ h2 {
   display: inline-flex;
   margin-left: -9px; }
 
+.sign-up--close {
+  display: none; }
+
 .sign-up__content {
   min-height: 728px;
   justify-content: flex-start;
@@ -2152,7 +2135,7 @@ h2 {
     .about-project {
       padding-top: 48px;
       font-size: 14px;
-      line-height: 19.2px; } }
+      line-height: 19.6px; } }
 
 .about-project h1 {
   margin: 0;
@@ -2183,50 +2166,84 @@ h2 {
   margin-top: 78px; }
   @media (max-width: 767px) {
     .about-project__item {
-      margin-top: 68px; } }
+      margin-top: 40px; } }
 
 .about-project h2 {
   margin: 0;
   padding-bottom: 18px; }
 
+.about-project__item p,
+.about-project__order-list li {
+  max-width: 860px; }
+  @media (max-width: 1199px) {
+    .about-project__item p,
+    .about-project__order-list li {
+      max-width: 690px; } }
+  @media (max-width: 1023px) {
+    .about-project__item p,
+    .about-project__order-list li {
+      max-width: 100%;
+      padding-right: 79px; } }
+  @media (max-width: 767px) {
+    .about-project__item p,
+    .about-project__order-list li {
+      padding-right: 61px; } }
+  @media (max-width: 567px) {
+    .about-project__item p,
+    .about-project__order-list li {
+      padding-right: 0; } }
+
 .about-project__item p {
   margin: 0;
-  max-width: 860px;
   margin-bottom: 19px; }
-  @media (max-width: 1199px) {
-    .about-project__item p {
-      max-width: 690px; } }
 
 .about-project__order-list {
   padding-left: 29px; }
+  @media (max-width: 567px) {
+    .about-project__order-list {
+      padding-left: 20px; } }
 
 .about-project__order-list li {
-  max-width: 860px;
   margin-bottom: 20px; }
   @media (max-width: 1199px) {
     .about-project__order-list li {
-      max-width: 690px;
       margin-bottom: 16px; } }
 
 .about-project__contest {
   display: flex;
   flex-direction: row; }
-  .about-project__contest p {
-    margin: 0; }
+
+.about-project__contest p {
+  margin: 0; }
+  @media (max-width: 1023px) {
+    .about-project__contest p {
+      max-width: 545px;
+      padding-right: 0; } }
+  @media (max-width: 567px) {
+    .about-project__contest p {
+      max-width: 100%; } }
 
 .about-project__participants-number {
   padding-left: 40px; }
   .about-project__participants-number h2 {
     padding-bottom: 0; }
-  .about-project__participants-number p {
-    font-size: 16px;
-    line-height: 22.4px; }
   @media (max-width: 1199px) {
     .about-project__participants-number {
-      padding-left: 32px; }
-      .about-project__participants-number p {
-        font-size: 14px;
-        line-height: 19.2px; } }
+      padding-left: 32px; } }
+  @media (max-width: 567px) {
+    .about-project__participants-number {
+      display: none; } }
+
+.about-project__participants-number p {
+  font-size: 16px;
+  line-height: 22.4px; }
+  @media (max-width: 1199px) {
+    .about-project__participants-number p {
+      font-size: 14px;
+      line-height: 19.6px; } }
+  @media (max-width: 1023px) {
+    .about-project__participants-number p {
+      padding-right: 44px; } }
 
 .organizers__wrapper {
   padding-top: 61px; }
@@ -2256,4 +2273,397 @@ h2 {
   padding-top: 10px; }
 
 .organizers__list p {
+  font-weight: 500;
   margin: 0; }
+
+.memorial {
+  padding-top: 62px; }
+  @media (max-width: 767px) {
+    .memorial {
+      padding-top: 47px; } }
+
+.memorial h1 {
+  margin: 0;
+  padding-bottom: 39px; }
+  @media (max-width: 767px) {
+    .memorial h1 {
+      padding-bottom: 27px; } }
+
+.memorial h2 {
+  font-family: "Inter", "Roboto", sans-serif;
+  margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44.8px;
+  text-transform: none;
+  padding-bottom: 37px; }
+  @media (max-width: 1199px) {
+    .memorial h2 {
+      font-size: 24px;
+      line-height: 33.6px; } }
+  @media (max-width: 767px) {
+    .memorial h2 {
+      font-size: 20px;
+      line-height: 28px;
+      padding-bottom: 32px; } }
+
+.memorial__wrapper p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  padding-bottom: 20px; }
+  @media (max-width: 1199px) {
+    .memorial__wrapper p {
+      padding-bottom: 18px;
+      font-size: 18px;
+      line-height: 25.2px; } }
+  @media (max-width: 1023px) {
+    .memorial__wrapper p {
+      padding-bottom: 17px; } }
+  @media (max-width: 767px) {
+    .memorial__wrapper p {
+      font-size: 14px;
+      line-height: 19.6px; } }
+
+.memorial__wrapper > p,
+.memorial__wrapper blockquote {
+  padding-right: 304px; }
+  @media (max-width: 1199px) {
+    .memorial__wrapper > p,
+    .memorial__wrapper blockquote {
+      padding-right: 253px; } }
+
+.memorial__wrapper blockquote {
+  margin: 0;
+  font-family: "Cormorant", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 57.6px;
+  padding-top: 46px;
+  padding-bottom: 39px; }
+  @media (max-width: 1199px) {
+    .memorial__wrapper blockquote {
+      font-size: 44px;
+      line-height: 52.8px; } }
+  @media (max-width: 767px) {
+    .memorial__wrapper blockquote {
+      font-size: 24px;
+      line-height: 28px;
+      padding-top: 17px;
+      padding-bottom: 34px; } }
+
+.memorial__content {
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  padding-top: 29px; }
+  @media (max-width: 1199px) {
+    .memorial__content {
+      padding-top: 22px; } }
+  @media (max-width: 1023px) {
+    .memorial__content {
+      padding-top: 29px; } }
+  @media (max-width: 767px) {
+    .memorial__content {
+      padding-top: 26px; } }
+  @media (max-width: 567px) {
+    .memorial__content {
+      flex-direction: column; } }
+
+.memorial__poster {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 137px;
+  flex-shrink: 0; }
+  .memorial__poster p {
+    font-size: 16px;
+    line-height: 22.4px;
+    margin: 0;
+    padding: 16px 15px 18px 30px; }
+  @media (max-width: 1199px) {
+    .memorial__poster {
+      padding-top: 127px; }
+      .memorial__poster p {
+        font-size: 14px;
+        line-height: 19.6px;
+        padding: 16px 4px 14px 23px; } }
+  @media (max-width: 1023px) {
+    .memorial__poster {
+      padding-top: 152px; } }
+  @media (max-width: 767px) {
+    .memorial__poster {
+      padding-top: 139px;
+      flex-basis: 35%; }
+      .memorial__poster p {
+        font-size: 12px;
+        line-height: 16.8px;
+        padding: 9px 21px 19px 28px; } }
+
+@media (max-width: 1199px) {
+  .memorial__poster img {
+    width: 210px;
+    height: 311px; } }
+
+@media (max-width: 1023px) {
+  .memorial__poster img {
+    width: 162px;
+    height: 240px; } }
+
+@media (max-width: 767px) {
+  .memorial__poster img {
+    width: 150px;
+    height: 222px; } }
+
+.memorial-photo__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-top: 20px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 34px;
+  padding-bottom: 80px; }
+  @media (max-width: 1199px) {
+    .memorial-photo__list {
+      padding-top: 12px;
+      row-gap: 26px;
+      -moz-column-gap: 31px;
+           column-gap: 31px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo__list {
+      padding-top: 20px;
+      row-gap: 23px;
+      -moz-column-gap: 30px;
+           column-gap: 30px; } }
+  @media (max-width: 767px) {
+    .memorial-photo__list {
+      grid-template-columns: repeat(14, 1fr);
+      -moz-column-gap: 20px;
+           column-gap: 20px;
+      row-gap: 18px; } }
+  @media (max-width: 567px) {
+    .memorial-photo__list {
+      grid-template-columns: repeat(2, 1fr);
+      -moz-column-gap: 11px;
+           column-gap: 11px;
+      row-gap: 5px; } }
+
+.memorial-photo li:first-of-type {
+  grid-column: span 6; }
+  @media (max-width: 767px) {
+    .memorial-photo li:first-of-type {
+      grid-column: span 7; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:first-of-type {
+      grid-column: span 1; } }
+
+.memorial-photo li:nth-of-type(2) {
+  margin-top: 209px;
+  grid-column: span 6; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(2) {
+      margin-top: 167px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(2) {
+      margin-top: 132px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(2) {
+      margin-top: 91px;
+      grid-column: span 7; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(2) {
+      grid-column: span 1;
+      margin-top: 54px; } }
+
+.memorial-photo li:nth-of-type(3) {
+  grid-column: span 5; }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(3) {
+      grid-column: span 6;
+      margin-right: 7px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(3) {
+      grid-column: span 1;
+      margin-right: 26px; } }
+
+.memorial-photo li:nth-of-type(4) {
+  margin-top: 60px;
+  grid-column: span 5; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(4) {
+      margin-top: 48px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(4) {
+      margin-top: 39px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(4) {
+      grid-column: 7 / span 6;
+      margin-top: 25px;
+      margin-left: -6px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(4) {
+      grid-column: span 1;
+      margin: 15px 50px 0 -26px; } }
+
+.memorial-photo li:nth-of-type(5) {
+  grid-column: -1/5;
+  justify-self: end;
+  margin-top: -237px; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(5) {
+      grid-column: -1/8;
+      margin-top: -196px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(5) {
+      margin-top: -148px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(5) {
+      grid-column: -1/9;
+      justify-self: end;
+      margin-top: -108px;
+      margin-left: 6px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(5) {
+      grid-column: 2 / span 1;
+      margin-top: -57px;
+      margin-left: 24px; } }
+
+.memorial-photo li:nth-of-type(6) {
+  grid-column: span 6;
+  margin-top: -140px; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(6) {
+      margin-top: -106px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(6) {
+      margin-top: -92px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(6) {
+      grid-column: span 7;
+      margin-top: -67px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(6) {
+      grid-column: span 1;
+      margin-top: -37px; } }
+
+.memorial-photo li:nth-of-type(7) {
+  grid-column: span 6;
+  justify-self: end;
+  margin-top: 114px; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(7) {
+      margin-top: 96px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(7) {
+      margin-top: 68px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(7) {
+      grid-column: span 7;
+      margin-top: 44px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(7) {
+      grid-column: span 1;
+      margin-top: 28px; } }
+
+.memorial-photo li:nth-of-type(8) {
+  grid-column: span 12;
+  justify-self: center;
+  align-self: center;
+  margin-top: 41px;
+  margin-right: 100px; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(8) {
+      grid-column: 2 / span 9;
+      margin-top: 31px;
+      margin-right: 0; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(8) {
+      grid-column: 2 / span 10;
+      margin-top: 21px;
+      margin-right: 65px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(8) {
+      grid-column: 2 / span 12;
+      margin: 11px 50px 0 6px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(8) {
+      grid-column: 1 / span 2;
+      margin: 9px 50px 0 25px; } }
+
+.memorial-photo li:nth-of-type(9) {
+  grid-column: span 8;
+  margin-top: 41px; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(9) {
+      margin-top: 27px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(9) {
+      margin-top: 24px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(9) {
+      grid-column: span 9;
+      margin-top: 7px;
+      margin-right: -12px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(9) {
+      grid-column: span 1;
+      margin-top: 17px;
+      margin-right: -51px; } }
+
+.memorial-photo li:nth-of-type(10) {
+  grid-column: span 4;
+  margin-top: 135px; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(10) {
+      margin-top: 101px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(10) {
+      margin-top: 83px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(10) {
+      grid-column: 10 / span 5;
+      margin-top: 48px;
+      margin-left: 13px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(10) {
+      grid-column: span 1;
+      margin-left: 50px;
+      margin-top: 41px; } }
+
+.memorial-photo li:nth-of-type(11) {
+  grid-column: 2 / span 7;
+  margin-top: -38px; }
+  @media (max-width: 1199px) {
+    .memorial-photo li:nth-of-type(11) {
+      margin-top: -28px; } }
+  @media (max-width: 767px) {
+    .memorial-photo li:nth-of-type(11) {
+      grid-column: 2 / span 8;
+      margin: -23px -11px 0 6px; } }
+  @media (max-width: 567px) {
+    .memorial-photo li:nth-of-type(11) {
+      grid-column: span 1;
+      margin: -11px -50px 0 25px; } }
+
+.memorial-photo p {
+  margin: 0;
+  padding-top: 12px; }
+  @media (max-width: 1199px) {
+    .memorial-photo p {
+      font-size: 14px;
+      line-height: 19.6px;
+      padding-top: 8px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo p {
+      padding-top: 6px; } }
+  @media (max-width: 767px) {
+    .memorial-photo p {
+      font-size: 12px;
+      line-height: 16.8px; } }
+  @media (max-width: 567px) {
+    .memorial-photo p {
+      padding-top: 1px; } }

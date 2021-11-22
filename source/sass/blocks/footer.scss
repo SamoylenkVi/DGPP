@@ -67,6 +67,23 @@
 			line-height: $base-tablet-line-height;
 		}
 	}
+
+	@include mobile-h {
+
+		li {
+			padding-top: 12px;
+		}
+
+		p,
+		a {
+			font-size: $base-font-size;
+			line-height: $head2-mobile-line-height;
+		}
+
+		p {
+			max-width: 228px
+		}
+	}
 }
 
 .footer__wrapper a {
@@ -76,17 +93,17 @@
 .footer__link-scroll {
 	min-height: 48px;
 	background-color: $base-grey;
-
-	@include tablet-v {
-		margin-right: 7px;
-	}
 }
 
 .footer__link-create {
 	padding-right: 5px;
 
 	@include tablet {
-		padding-right: 11px;
+		padding-right: 7px;
+	}
+
+	@include tablet-v {
+		padding-right: 5px;
 	}
 
 	@include mobile-h {
