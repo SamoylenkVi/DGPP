@@ -6,6 +6,20 @@
 	min-height: 544px;
 	z-index: 5;
 	background-color: $white;
+
+	@include tablet {
+		min-height: 502px;
+	}
+
+	@include mobile-h {
+		padding-right: 20px;
+		min-height: 441px;
+	}
+
+	@include mobile {
+		min-height: 611px;
+		padding-right: 14px;
+	}
 }
 
 .sign-in__title {
@@ -19,17 +33,52 @@
 		background-image: url(../img/error.svg);
 		width: 40px;
 		height: 42px;
+		background-size: contain;
+
+		@include tablet {
+			width: 41.07px;
+			height: 32.65px;
+		}
+
+		@include mobile-h {
+			width: 25.92px;
+			height: 17.75px;
+			top: 6px;
+		}
+	}
+}
+
+.sign-in__logo {
+	@include mobile-h {
+		margin-right: 31px;
 	}
 }
 
 .sign-in__wrapper {
 	display: flex;
 	flex-direction: row;
+
+	@include mobile {
+		flex-direction: column;
+	}
 }
 
 .sign-in__form {
 	max-width: 301px;
 	padding-bottom: 63px;
+
+	@include tablet {
+		padding-bottom: 55px;
+	}
+
+	@include mobile-h {
+		padding-bottom: 35px;
+	}
+
+	@include mobile {
+		max-width: 100%;
+		padding-bottom: 16px;
+	}
 }
 
 .sign-in__buttons {
@@ -41,30 +90,89 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	max-width: 247px;
-	height: 266.5px;
 	background-image: url("../img/box.png");
+	background-size: 247px auto;
 	background-position: bottom;
 	background-repeat: no-repeat;
 	margin-left: auto;
 	align-self: flex-end;
 	padding-bottom: 100px;
+	flex-basis: 36%;
 
-	h3 {
-		margin: 0;
-		font-size: $leed-mobile-font-size;
-		line-height: $head3-line-height;
-		padding-bottom: 9px;
-    padding-left: 10px;
+	@include tablet {
+		background-size: 198px auto;
+		margin-left: 47px;
+		padding-bottom: 86px;
 	}
 
-	p {
-		margin: 0;
-		padding: 0 22px 33px 10px;
+	@include mobile-h {
+		margin-left: 18px;
+		padding-bottom: 50px;
+		background-size: 140px auto;
+	}
+
+	@include mobile {
+		padding-bottom: 0;
+		margin-left: 0;
+		background-position: right bottom;
+		background-size: 136px auto;
+	}
+}
+
+.sign-in__present h3 {
+	margin: 0;
+	font-size: $leed-mobile-font-size;
+	line-height: $head3-line-height;
+	padding-bottom: 9px;
+	padding-left: 10px;
+
+	@include tablet {
+		font-size: $head3-tablet-font-size;
+		line-height: $head2-mobile-line-height;
+		padding-bottom: 6px;
+		padding-left: 1px;
+	}
+
+	@include mobile-h {
+		font-size: $base-font-size;
+		line-height: $head3-mobile-height;
+	}
+}
+
+.sign-in__present p {
+	margin: 0;
+	padding: 0 22px 42px 10px;
+
+	@include tablet {
+		font-size: $small-text-tablet-size;
+		line-height: $base-line-height;
+		padding: 0 14px 21px 2px;
+	}
+
+	@include mobile-h {
+		font-size: $small-text-mobile-size;
+		line-height: $small-text-mobile-height;
+		padding-right: 0;
+	}
+
+	@include mobile {
+		padding-right: 142px;
 	}
 }
 
 .sign-in__scores {
 	display: inline-flex;
+	margin-top: -4px;
+	margin-bottom: -6px;
 	margin-left: -9px;
+
+	@include tablet {
+		vertical-align: text-top;
+		margin: -6px -4px 6px -10px;
+	}
+
+	@include mobile-h {
+		margin: -4px 0 -6px ;
+		vertical-align: middle;
+	}
 }
