@@ -1,5 +1,13 @@
 .organizers__wrapper {
 	padding-top: 61px;
+
+	@include tablet {
+		padding-top: 56px;
+	}
+
+	@include mobile-h {
+		padding-top: 24px;
+	}
 }
 
 .organizers__title {
@@ -10,11 +18,37 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 260px);
 	justify-content: center;
-	gap: 40px;
+	column-gap: 40px;
+	row-gap: 37px;
 	font-size: $base-font-size;
 	line-height: $base-mobile-line-height;
 	padding-top: 27px;
-	padding-bottom: 76px;
+	padding-bottom: 78px;
+
+	@include tablet {
+		grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+		gap: 30px;
+		font-size: $small-text-tablet-size;
+		line-height: $base-line-height;
+	}
+
+	@include tablet-v {
+		grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
+		padding-bottom: 81px;
+	}
+
+	@include mobile-h {
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		font-size: $small-text-mobile-size;
+		line-height: $small-text-mobile-height;
+		padding-top: 17px;
+		padding-bottom: 46px;
+	}
+
+	@include mobile {
+		grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+		padding-bottom: 41px;
+	}
 }
 
 .organizers__list figure {
@@ -28,6 +62,10 @@
 .organizers__list figcaption {
 	font-weight: $bold-font-weight;
 	padding-top: 10px;
+
+	@include mobile-h {
+		padding-top: 4px;
+	}
 }
 
 .organizers__list p {

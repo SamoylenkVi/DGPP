@@ -983,6 +983,15 @@ h2 {
       .footer__list a {
         font-size: 18px;
         line-height: 25.2px; } }
+  @media (max-width: 767px) {
+    .footer__list li {
+      padding-top: 12px; }
+    .footer__list p,
+    .footer__list a {
+      font-size: 16px;
+      line-height: 24px; }
+    .footer__list p {
+      max-width: 228px; } }
 
 .footer__wrapper a {
   text-decoration: none;
@@ -992,15 +1001,15 @@ h2 {
 .footer__link-scroll {
   min-height: 48px;
   background-color: #e6e6e6; }
-  @media (max-width: 1023px) {
-    .footer__link-scroll {
-      margin-right: 7px; } }
 
 .footer__link-create {
   padding-right: 5px; }
   @media (max-width: 1199px) {
     .footer__link-create {
-      padding-right: 11px; } }
+      padding-right: 7px; } }
+  @media (max-width: 1023px) {
+    .footer__link-create {
+      padding-right: 5px; } }
   @media (max-width: 767px) {
     .footer__link-create {
       margin-top: 32px; } }
@@ -2331,7 +2340,15 @@ h2 {
   @media (max-width: 1199px) {
     .memorial__wrapper > p,
     .memorial__wrapper blockquote {
-      padding-right: 253px; } }
+      padding-right: 246px; } }
+  @media (max-width: 1023px) {
+    .memorial__wrapper > p,
+    .memorial__wrapper blockquote {
+      padding-right: 70px; } }
+  @media (max-width: 767px) {
+    .memorial__wrapper > p,
+    .memorial__wrapper blockquote {
+      padding-right: 2px; } }
 
 .memorial__wrapper blockquote {
   margin: 0;
@@ -2340,7 +2357,7 @@ h2 {
   font-weight: 600;
   font-size: 48px;
   line-height: 57.6px;
-  padding-top: 46px;
+  padding-top: 21px;
   padding-bottom: 39px; }
   @media (max-width: 1199px) {
     .memorial__wrapper blockquote {
@@ -2350,25 +2367,34 @@ h2 {
     .memorial__wrapper blockquote {
       font-size: 24px;
       line-height: 28px;
-      padding-top: 17px;
+      padding-top: 26px;
       padding-bottom: 34px; } }
+  @media (max-width: 567px) {
+    .memorial__wrapper blockquote {
+      padding-top: 46px; } }
 
 .memorial__content {
   display: grid;
   grid-template-columns: 6fr 2fr;
+  -moz-column-gap: 38px;
+       column-gap: 38px;
   padding-top: 29px; }
   @media (max-width: 1199px) {
     .memorial__content {
-      padding-top: 22px; } }
+      padding-top: 22px;
+      -moz-column-gap: 17px;
+           column-gap: 17px; } }
   @media (max-width: 1023px) {
     .memorial__content {
       padding-top: 29px; } }
   @media (max-width: 767px) {
     .memorial__content {
-      padding-top: 26px; } }
+      padding-top: 26px;
+      grid-template-columns: 6fr 3fr; } }
   @media (max-width: 567px) {
     .memorial__content {
-      flex-direction: column; } }
+      grid-template-columns: 1fr;
+      padding-top: 40px; } }
 
 .memorial__poster {
   grid-row: span 2;
@@ -2381,25 +2407,33 @@ h2 {
     font-size: 16px;
     line-height: 22.4px;
     margin: 0;
-    padding: 16px 15px 18px 30px; }
+    padding: 16px 15px 18px 20px; }
   @media (max-width: 1199px) {
     .memorial__poster {
       padding-top: 127px; }
       .memorial__poster p {
         font-size: 14px;
         line-height: 19.6px;
-        padding: 16px 4px 14px 23px; } }
+        padding: 16px 4px 14px 17px; } }
   @media (max-width: 1023px) {
     .memorial__poster {
       padding-top: 152px; } }
   @media (max-width: 767px) {
     .memorial__poster {
-      padding-top: 139px;
-      flex-basis: 35%; }
+      padding-top: 139px; }
       .memorial__poster p {
         font-size: 12px;
         line-height: 16.8px;
-        padding: 9px 21px 19px 28px; } }
+        padding: 9px 21px 19px 14px; } }
+  @media (max-width: 567px) {
+    .memorial__poster {
+      padding-top: 20px;
+      padding-bottom: 31px;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .memorial__poster p {
+        padding: 2px 12px 19px 10px; } }
 
 @media (max-width: 1199px) {
   .memorial__poster img {
@@ -2429,7 +2463,7 @@ h2 {
   padding-bottom: 80px; }
   @media (max-width: 1199px) {
     .memorial-photo__list {
-      padding-top: 12px;
+      padding-top: 17px;
       row-gap: 26px;
       -moz-column-gap: 31px;
            column-gap: 31px; } }
@@ -2444,13 +2478,15 @@ h2 {
       grid-template-columns: repeat(14, 1fr);
       -moz-column-gap: 20px;
            column-gap: 20px;
-      row-gap: 18px; } }
+      row-gap: 18px;
+      padding-bottom: 35px; } }
   @media (max-width: 567px) {
     .memorial-photo__list {
       grid-template-columns: repeat(2, 1fr);
       -moz-column-gap: 11px;
            column-gap: 11px;
-      row-gap: 5px; } }
+      row-gap: 5px;
+      padding-top: 48px; } }
 
 .memorial-photo li:first-of-type {
   grid-column: span 6; }
@@ -2537,7 +2573,7 @@ h2 {
   margin-top: -140px; }
   @media (max-width: 1199px) {
     .memorial-photo li:nth-of-type(6) {
-      margin-top: -106px; } }
+      margin-top: -113px; } }
   @media (max-width: 1023px) {
     .memorial-photo li:nth-of-type(6) {
       margin-top: -92px; } }
@@ -2556,7 +2592,7 @@ h2 {
   margin-top: 114px; }
   @media (max-width: 1199px) {
     .memorial-photo li:nth-of-type(7) {
-      margin-top: 96px; } }
+      margin-top: 88px; } }
   @media (max-width: 1023px) {
     .memorial-photo li:nth-of-type(7) {
       margin-top: 68px; } }
@@ -2639,6 +2675,9 @@ h2 {
   margin-top: -38px; }
   @media (max-width: 1199px) {
     .memorial-photo li:nth-of-type(11) {
+      margin-top: -33px; } }
+  @media (max-width: 1023px) {
+    .memorial-photo li:nth-of-type(11) {
       margin-top: -28px; } }
   @media (max-width: 767px) {
     .memorial-photo li:nth-of-type(11) {
@@ -2656,7 +2695,7 @@ h2 {
     .memorial-photo p {
       font-size: 14px;
       line-height: 19.6px;
-      padding-top: 8px; } }
+      padding-top: 12px; } }
   @media (max-width: 1023px) {
     .memorial-photo p {
       padding-top: 6px; } }

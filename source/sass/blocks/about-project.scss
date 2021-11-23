@@ -6,6 +6,7 @@
 	@include tablet {
 		font-size: $base-tablet-font-size;
 		line-height: $base-tablet-line-height;
+		padding-top: 63px;
 	}
 
 	@include tablet-v {
@@ -15,7 +16,7 @@
 	@include mobile-h {
 		padding-top: 48px;
 		font-size: $small-text-tablet-size;
-		line-height: $base-line-height;
+		line-height: 19.6px;
 	}
 }
 
@@ -63,22 +64,17 @@
 
 .about-project__item p,
 .about-project__order-list li {
-	max-width: 860px;
+	padding-right: 317px;
 
 	@include tablet {
-		max-width: 690px;
+		padding-right: 241px;
 	}
 
 	@include tablet-v {
-		max-width: 100%;
 		padding-right: 79px;
 	}
 
 	@include mobile-h {
-		padding-right: 61px;
-	}
-
-	@include mobile {
 		padding-right: 0;
 	}
 }
@@ -86,12 +82,20 @@
 .about-project__item p {
 	margin: 0;
 	margin-bottom: 19px;
+
+	@include mobile-h {
+		margin-bottom: 15px;
+	}
+
+	@include mobile {
+		margin-bottom: 18px;
+	}
 }
 
 .about-project__order-list {
 	padding-left: 29px;
 
-	@include mobile {
+	@include mobile-h {
 		padding-left: 20px;
 	}
 }
@@ -100,6 +104,14 @@
 	margin-bottom: 20px;
 
 	@include tablet {
+		margin-bottom: 16px;
+	}
+
+	@include mobile-h {
+		margin-bottom: 15px;
+	}
+
+	@include mobile {
 		margin-bottom: 16px;
 	}
 }
@@ -111,14 +123,20 @@
 
 .about-project__contest p {
 	margin: 0;
-
+	flex-basis: 74%;
+	padding: 0;
 	@include tablet-v {
-		max-width: 545px;
-		padding-right: 0;
+		flex-basis: 94%;
+	}
+
+	@include mobile-h {
+		flex-basis: 77%;
+		padding-bottom: 5px;
 	}
 
 	@include mobile {
-		max-width: 100%;
+		flex-basis: 100%;
+		padding-right: 16px;
 	}
 }
 
@@ -148,6 +166,11 @@
 	}
 
 	@include tablet-v {
-		padding-right: 44px;
+		padding-right: 18px;
+	}
+
+	@include mobile-h {
+		font-size: $small-text-mobile-size;
+		line-height: $small-text-mobile-height;
 	}
 }
