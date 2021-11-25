@@ -284,27 +284,3 @@
 		margin: -11px -50px 0 25px;
 	}
 }
-
-.memorial-photo p {
-	margin: 0;
-	padding-top: 12px;
-
-	@include tablet {
-		font-size: $small-text-tablet-size;
-		line-height: $base-line-height;
-		padding-top: 12px;
-	}
-
-	@include tablet-v {
-		padding-top: 6px;
-	}
-
-	@include mobile-h {
-		font-size: $small-text-mobile-size;
-		line-height: $small-text-mobile-height;
-	}
-
-	@include mobile {
-		padding-top: 1px;
-	}
-}

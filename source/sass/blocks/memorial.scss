@@ -133,64 +133,56 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	padding-top: 137px;
+	padding-top: 117px;
 	flex-shrink: 0;
 
 	p {
 		font-size: $base-font-size;
 		line-height: $base-mobile-line-height;
 		margin: 0;
-		padding: 16px 15px 18px 20px;
+		padding: 0 15px 18px 20px;
 	}
 
 	@include tablet {
-		padding-top: 127px;
+		padding-top: 107px;
 
 		p {
 			font-size: $small-text-tablet-size;
 			line-height: $base-line-height;
-			padding: 16px 4px 14px 17px;
+			padding: 0 4px 14px 17px;
 		}
 	}
 
 	@include tablet-v {
-		padding-top: 152px;
+		padding-top: 132px;
 	}
 
 	@include mobile-h {
-		padding-top: 139px;
+		padding-top: 128px;
 		p {
 			font-size: $small-text-mobile-size;
 			line-height: $small-text-mobile-height;
-			padding: 9px 21px 19px 14px;
+			padding: 0 21px 19px 14px;
 		}
 	}
 
 	@include mobile {
-		padding-top: 20px;
-		padding-bottom: 31px;
+		padding-top: 0;
+		padding-bottom: 11px;
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: flex-start;
 
 		p {
-			padding: 2px 12px 19px 10px;
+			padding: 18px 12px 19px 10px;
 		}
 	}
 }
 
 .memorial__poster img {
-	@include tablet {
-		width: 210px;
-		height: 311px;
-	}
+	object-fit: cover;
 
-	@include tablet-v {
-		width: 162px;
-		height: 240px;
-	}
-
-	@include mobile-h {
+	@include mobile {
 		width: 150px;
 		height: 222px;
 	}
