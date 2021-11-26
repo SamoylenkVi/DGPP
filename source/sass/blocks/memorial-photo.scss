@@ -284,3 +284,29 @@
 		margin: -11px -50px 0 25px;
 	}
 }
+
+.memorial-photo__source {
+	margin: 0;
+	padding-top: 20px;
+	color: $black;
+	opacity: 50%;
+	font-size: $base-tablet-font-size;
+	line-height: $base-tablet-line-height;
+
+
+	a {
+		@include link-default-remove;
+		transition-duration: 300ms;
+
+		@include desktop {
+			&:hover,
+			&:focus {
+				opacity: 40%;
+			}
+
+			&:active {
+				opacity: 30%;
+			}
+		}
+	}
+}
