@@ -23,7 +23,7 @@
 	font-size: $base-font-size;
 	line-height: $base-mobile-line-height;
 	padding-top: 27px;
-	padding-bottom: 78px;
+	padding-bottom: 73px;
 
 	@include tablet {
 		grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));

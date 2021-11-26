@@ -1,0 +1,161 @@
+.partners h2 {
+	margin: 0;
+	padding-bottom: 42px;
+}
+
+.partners__item h3 {
+	font-weight: $bold-font-weight;
+	font-size: $head3-font-size;
+	line-height: $text-line-height;
+	margin: 0;
+	width: 100%;
+
+	@include tablet-v {
+		font-size: $base-tablet-font-size;
+		line-height: $base-tablet-line-height;
+	}
+}
+
+.partners__item {
+	padding-bottom: 10px;
+}
+
+.partners__item--other {
+	@include mobile-h {
+		grid-column: span 2;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		a {
+			margin: auto;
+		}
+
+		h3 {
+			padding-bottom: 20px;
+		}
+
+		.partners__link--calligraphy {
+			margin-top: 20px;
+		}
+	}
+
+	@include mobile {
+		grid-column: span 1;
+		flex-direction: column;
+		align-items: flex-start;
+
+		a {
+			width: auto;
+			margin: 0;
+		}
+
+		.partners__link--alpina {
+			margin-bottom: 10px;
+		}
+
+		.partners__link--arzamas {
+			margin-left: 5px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.partners__wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 39px;
+	padding-bottom: 76px;
+
+	@include tablet-v {
+		column-gap: 70px;
+	}
+
+	@include mobile-h {
+		grid-template-columns: 1fr 1fr;
+		row-gap: 45px;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		padding-bottom: 20px;
+	}
+}
+
+.partners__link {
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.partners__link--lenta {
+	margin-top: 10px;
+	margin-bottom: 34px;
+}
+
+.partners__link--vk {
+	margin-bottom: 36px;
+}
+
+.partners__link--spbgu {
+	margin-top: 10px;
+}
+
+.partners__link--komitet {
+	width: 40%;
+	margin-right: 5%;
+
+	@include mobile {
+		width: 29%;
+	}
+}
+
+.partners__link--tv {
+	vertical-align: top;
+	width: 31%;
+	margin-right: 5%;
+	margin-top: 30px;
+
+	@include mobile {
+		width: 22%;
+	}
+}
+
+.partners__link--ls {
+	margin-left: 10px;
+
+	@include mobile-h {
+		width: 27%;
+	}
+}
+
+.partners__link--arzamas {
+	margin-bottom: 10px;
+	margin-left: 10px;
+
+	@include mobile-h {
+		width: 27%;
+	}
+}
+
+.partners__link--plow {
+	width: 40%;
+	margin-right: 2%;
+
+	@include mobile-h {
+		width: 20%;
+	}
+}
+
+.partners__link--calligraphy {
+	width: 40%;
+
+	@include mobile-h {
+		width: 20%;
+	}
+}
+
+.partners__link--alpina {
+	@include mobile-h {
+		width: 27%;
+	}
+}
